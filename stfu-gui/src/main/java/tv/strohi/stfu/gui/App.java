@@ -8,12 +8,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import tv.strohi.stfu.gui.version.Version;
+
 public class App extends Application {
     private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("windows/main"));
+        stage.setTitle("Strohis Toolset Für Upload - v" + Version.getVersion() + " [BETA]");
         stage.setScene(scene);
         stage.setMaximized(true);
         stage.show();
