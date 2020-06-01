@@ -32,7 +32,7 @@
             <MenuItem text="Schließen" />
         </Menu>
         <Menu text="Verwalten">
-            <MenuItem text="Account" />
+            <MenuItem text="Accounts" />
             <MenuItem text="Templates" />
             <MenuItem text="Pfade" />
         </Menu>
