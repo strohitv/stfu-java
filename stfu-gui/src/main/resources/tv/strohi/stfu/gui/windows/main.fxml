@@ -1,42 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
 
-<GridPane xmlns="http://javafx.com/javafx"
-          xmlns:fx="http://javafx.com/fxml"
-          alignment="CENTER"
-          fx:controller="tv.strohi.stfu.gui.windows.MainController"
-          fx:id="grid" >
+<GridPane alignment="CENTER" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tv.strohi.stfu.gui.windows.MainController">
     <columnConstraints>
-        <ColumnConstraints minWidth="10.0" hgrow="ALWAYS" />
-        <ColumnConstraints minWidth="10.0" hgrow="ALWAYS" />
-        <ColumnConstraints minWidth="10.0" hgrow="ALWAYS" />
-        <ColumnConstraints minWidth="10.0" hgrow="ALWAYS" />
+        <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+        <!-- Menu -->
+        <!-- TabPane -->
+        <!-- LoggedInLabel -->
+        <ColumnConstraints hgrow="NEVER" minWidth="100.0" />
+        <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+        <!-- Menu -->
+        <!-- TabPane -->
+        <ColumnConstraints hgrow="ALWAYS" minWidth="600.0" />
+        <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
     </columnConstraints>
     <rowConstraints>
+        <!-- Menu -->
+        <RowConstraints minHeight="5.0" vgrow="NEVER" />
         <RowConstraints minHeight="10.0" vgrow="NEVER" />
+        <!-- TabPane -->
+        <RowConstraints minHeight="400.0" vgrow="ALWAYS" />
         <RowConstraints minHeight="10.0" vgrow="NEVER" />
-        <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
-        <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
-        <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+        <!-- LoggedInLabel -->
+        <RowConstraints minHeight="5.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" vgrow="NEVER" />
     </rowConstraints>
-    <children>
-        <MenuBar GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="4">
-            <Menu text="Datei">
-                <MenuItem text="Schließen"/>
-            </Menu>
-            <Menu text="Verwalten">
-                <MenuItem text="Account"/>
-                <MenuItem text="Templates"/>
-                <MenuItem text="Pfade"/>
-            </Menu>
-            <Menu text="Hilfe / Support"/>
-        </MenuBar>
-        <Button GridPane.columnIndex="1" GridPane.rowIndex="2" text="HelloJava"/>
-    </children>
+    <MenuBar GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="0">
+        <Menu text="Datei">
+            <MenuItem text="Schließen" />
+        </Menu>
+        <Menu text="Verwalten">
+            <MenuItem text="Account" />
+            <MenuItem text="Templates" />
+            <MenuItem text="Pfade" />
+        </Menu>
+        <Menu text="Hilfe / Support">
+            <MenuItem text="Neue Funktionen" />
+            <SeparatorMenuItem />
+            <MenuItem text="Videotutorial-Playlist" />
+            <MenuItem text="Thread im LetsPlayForum" />
+            <MenuItem text="Thread im YoutubeForum" />
+            <MenuItem text="Discord-Server" />
+            <MenuItem text="strohi auf Twitter" />
+            <SeparatorMenuItem />
+            <MenuItem text="Download-Seite" />
+            <SeparatorMenuItem />
+            <MenuItem text="Fehlerverzeichnis öffnen" />
+        </Menu>
+    </MenuBar>
+
+    <TabPane stylesheets="@css/tabpane.css" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2">
+        <Tab text="Warteschlange" closable="false" >
+            <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px" />
+        </Tab>
+        <Tab text="Zu überwachende Pfade" closable="false" >
+            <GridPane style="-fx-background-color: yellow; -fx-border-color: gray; -fx-border-width: 1px" />
+        </Tab>
+        <Tab text="Videos, die nicht hochgeladen werden sollen" closable="false" >
+            <GridPane style="-fx-background-color: green; -fx-border-color: gray; -fx-border-width: 1px" />
+        </Tab>
+    </TabPane>
+
+    <Label text="Es sind aktuell 3 Konten verbunden." GridPane.columnIndex="1" GridPane.rowIndex="4" />
 </GridPane>
