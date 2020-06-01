@@ -10,11 +10,33 @@
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
           alignment="CENTER"
-          fx:controller="tv.strohi.stfu.gui.windows.MainController">
+          fx:controller="tv.strohi.stfu.gui.windows.MainController"
+          fx:id="grid" >
+    <columnConstraints>
+        <ColumnConstraints minWidth="10.0" hgrow="ALWAYS" />
+        <ColumnConstraints minWidth="10.0" hgrow="ALWAYS" />
+        <ColumnConstraints minWidth="10.0" hgrow="ALWAYS" />
+        <ColumnConstraints minWidth="10.0" hgrow="ALWAYS" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+        <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+        <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+    </rowConstraints>
     <children>
-        <Button GridPane.columnIndex="1" GridPane.rowIndex="1" text="HelloJava" />
+        <MenuBar GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="4">
+            <Menu text="Datei">
+                <MenuItem text="Schließen"/>
+            </Menu>
+            <Menu text="Verwalten">
+                <MenuItem text="Account"/>
+                <MenuItem text="Templates"/>
+                <MenuItem text="Pfade"/>
+            </Menu>
+            <Menu text="Hilfe / Support"/>
+        </MenuBar>
+        <Button GridPane.columnIndex="1" GridPane.rowIndex="2" text="HelloJava"/>
     </children>
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
 </GridPane>
