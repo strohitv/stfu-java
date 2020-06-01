@@ -109,12 +109,12 @@
                         <phase>package</phase>
                         <goals><goal>launch4j</goal></goals>
                         <configuration>
-                            <headerType>console</headerType>
+                            <headerType>gui</headerType>
                             <outfile>target/STFU.exe</outfile>
                             <jar>target/stfu-gui.jar</jar>
                             <errTitle>encc</errTitle>
                             <classPath>
-                                <mainClass>tv.strohi.samples.ProgramEntryPoint</mainClass>
+                                <mainClass>tv.strohi.stfu.gui.ProgramEntryPoint</mainClass>
                                 <addDependencies>true</addDependencies>
                                 <preCp>anything</preCp>
                             </classPath>
