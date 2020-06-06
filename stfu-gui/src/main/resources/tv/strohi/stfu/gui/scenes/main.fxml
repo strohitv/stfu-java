@@ -218,7 +218,7 @@
                     </columns>
                 </TableView>
 
-                <Button onAction="#changeLanguage" text="tab.archive.add" GridPane.columnIndex="3"
+                <Button text="tab.archive.add" GridPane.columnIndex="3"
                         GridPane.rowIndex="5"/>
                 <Button text="tab.archive.move" GridPane.columnIndex="5" GridPane.rowIndex="5"/>
                 <Button text="tab.archive.remove" GridPane.columnIndex="7" GridPane.rowIndex="5"/>
@@ -228,7 +228,7 @@
 
     <Label text="window.connectedaccounts" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
 
-    <ComboBox maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.rowIndex="4" >
+    <ComboBox fx:id="languageComboBox" maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.rowIndex="4" onAction="#changeLanguage">
         <items>
             <FXCollections fx:factory="observableArrayList">
                 <String fx:value="Deutsch"/>

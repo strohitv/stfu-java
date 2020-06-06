@@ -9,7 +9,6 @@ import tv.strohi.stfu.gui.App;
 import tv.strohi.stfu.gui.i18n.LocalizationBinder;
 
 import java.net.URL;
-import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
@@ -22,6 +21,9 @@ public class MainController implements Initializable {
     @FXML
     public ComboBox<String> finishedActionComboBox;
 
+    @FXML
+    public ComboBox<String> languageComboBox;
+
     public MainController() {
     }
 
@@ -31,11 +33,14 @@ public class MainController implements Initializable {
 
         LocalizationBinder.addComboboxListener(speedComboBox, "bundles.scenes.main", "tab.queue.queue.limit.kbyte", "tab.queue.queue.limit.mbyte", "tab.queue.queue.limit.gbyte", "tab.queue.queue.limit.tbyte");
         LocalizationBinder.addComboboxListener(finishedActionComboBox, "bundles.scenes.main", "tab.queue.queue.afterupload.nothing", "tab.queue.queue.afterupload.close", "tab.queue.queue.afterupload.shutdown");
+
+        speedComboBox.getSelectionModel().select(1);
+        finishedActionComboBox.getSelectionModel().select(0);
+        languageComboBox.getSelectionModel().select(App.getLocale().getLanguage().equalsIgnoreCase("de") ? 0 : 1);
     }
 
     public void changeLanguage(ActionEvent actionEvent) {
-        Locale locale = App.getLocale();
-        if (locale.getLanguage().equalsIgnoreCase("de")) {
+        if (languageComboBox.getSelectionModel().getSelectedIndex() == 1) {
             App.setLocale("en");
         } else {
             App.setLocale("de");
