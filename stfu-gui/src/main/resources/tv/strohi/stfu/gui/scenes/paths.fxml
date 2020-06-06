@@ -89,7 +89,7 @@
     </TitledPane>
 
     <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" text="edit" GridPane.columnIndex="1"
-                GridPane.rowIndex="3" disable="true">
+                GridPane.rowIndex="3">
         <GridPane>
             <columnConstraints>
                 <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
@@ -156,7 +156,7 @@
             <!-- Reihenfolge hinzugefügte Videos -->
             <Label text="edit.sortorder" GridPane.columnIndex="1" GridPane.columnSpan="3"
                    GridPane.rowIndex="9"/>
-            <ComboBox maxWidth="400" GridPane.columnIndex="5" GridPane.columnSpan="7"
+            <ComboBox fx:id="sortOrderComboBox" maxWidth="400" GridPane.columnIndex="5" GridPane.columnSpan="7"
                       GridPane.rowIndex="9"/>
 
             <!-- Bestätigungs- / Abbrechen-Button -->
