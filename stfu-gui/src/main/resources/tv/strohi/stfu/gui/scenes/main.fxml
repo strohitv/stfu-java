@@ -87,7 +87,7 @@
                             <RowConstraints minHeight="20.0" vgrow="ALWAYS"/>
                             <RowConstraints minHeight="10.0" vgrow="NEVER"/>
                         </rowConstraints>
-                        <Label text="tab.queue.autoupload.notaktive" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Label text="tab.queue.autoupload.notactive" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
                         <SplitMenuButton text="tab.queue.autoupload.startnow" GridPane.columnIndex="3"
                                          GridPane.rowIndex="1">
                             <items>

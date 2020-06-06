@@ -11,6 +11,7 @@ import javafx.stage.Modality;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import tv.strohi.stfu.gui.App;
+import tv.strohi.stfu.gui.i18n.I18N;
 import tv.strohi.stfu.gui.i18n.LocalizationBinder;
 
 import java.io.IOException;
@@ -54,10 +55,14 @@ public class MainController implements Initializable {
     }
 
     public void openPathsScene(ActionEvent actionEvent) throws IOException {
-        Scene scene = new Scene(App.loadFXML("scenes/paths"));
+        showModal("scenes/paths", "subwindow.paths");
+    }
+
+    private void showModal(String scenePath, String titleResourceKey) throws IOException {
+        Scene scene = new Scene(App.loadFXML(scenePath));
 
         Stage stage = new Stage();
-        stage.setTitle("Pfade bearbeiten");
+        stage.setTitle(I18N.get("bundles.scenes.main", titleResourceKey));
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.show();
