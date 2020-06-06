@@ -40,7 +40,7 @@
         <Menu text="menu.manage">
             <MenuItem text="menu.manage.accounts"/>
             <MenuItem text="menu.manage.templates"/>
-            <MenuItem text="menu.manage.paths"/>
+            <MenuItem text="menu.manage.paths" onAction="#openPathsScene"/>
         </Menu>
         <Menu text="menu.help">
             <MenuItem text="menu.help.releasenotes"/>
