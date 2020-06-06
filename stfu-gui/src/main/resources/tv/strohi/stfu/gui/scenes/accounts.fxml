@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<GridPane fx:id="mainPane" alignment="CENTER" xmlns="http://javafx.com/javafx/10.0.2-internal"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="tv.strohi.stfu.gui.scenes.AccountsController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+        <ColumnConstraints hgrow="ALWAYS"/>
+        <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+        <RowConstraints vgrow="ALWAYS"/>
+        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+    </rowConstraints>
+
+    <TabPane stylesheets="@css/tabpane.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <Tab closable="false" text="tabs.youtube">
+            <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                    <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                    <RowConstraints vgrow="ALWAYS"/>
+                    <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                    <RowConstraints vgrow="SOMETIMES"/>
+                    <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                </rowConstraints>
+
+                <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" text="accounts.youtube"
+                            GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                            <ColumnConstraints hgrow="NEVER"/>
+                            <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                            <ColumnConstraints hgrow="ALWAYS"/>
+                            <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="ALWAYS"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                        </rowConstraints>
+
+                        <Button text="accounts.buttons.add" prefHeight="50" prefWidth="50" textFill="#009900"
+                                GridPane.columnIndex="1"
+                                GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button text="accounts.buttons.moveup" prefHeight="50" prefWidth="50" GridPane.columnIndex="1"
+                                GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button text="accounts.buttons.movedown" prefHeight="50" prefWidth="50" GridPane.columnIndex="1"
+                                GridPane.rowIndex="5">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button text="accounts.buttons.remove" prefHeight="50" prefWidth="50" textFill="#FF0000"
+                                GridPane.columnIndex="1"
+                                GridPane.rowIndex="7">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button text="accounts.buttons.clear" prefHeight="50" prefWidth="50" textFill="#FF0000"
+                                GridPane.columnIndex="1"
+                                GridPane.rowIndex="9">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Button>
+
+                        <TableView GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="11">
+                            <columns>
+                                <TableColumn prefWidth="600" sortable="false" text="accounts.youtube.list.title"/>
+                                <TableColumn prefWidth="150" sortable="false" text="accounts.youtube.list.id"/>
+                                <TableColumn prefWidth="150" sortable="false" text="accounts.youtube.list.region"/>
+                            </columns>
+                        </TableView>
+                    </GridPane>
+                </TitledPane>
+
+                <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" text="accounts.youtube.details" GridPane.columnIndex="1"
+                            GridPane.rowIndex="3">
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                            <ColumnConstraints hgrow="NEVER"/>
+                            <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                            <ColumnConstraints hgrow="ALWAYS"/>
+                            <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                        </rowConstraints>
+
+                        <!-- Pfad wählen -->
+                        <Label text="accounts.youtube.title" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Label text="strohi-no-binding" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                        <Label text="accounts.youtube.id" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                        <Label text="owejfowehgiho3hiohoihwioefwef-no-binding" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+                        <Label text="accounts.youtube.hyperlink" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                        <Hyperlink text="https://youtube.com/c/strohitv-no-binding" onAction="#openYoutubeLink" GridPane.columnIndex="3" GridPane.rowIndex="5"/>
+                        <Label text="accounts.youtube.region" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+                        <Label text="Deutschland-no-binding" GridPane.columnIndex="3" GridPane.rowIndex="7"/>
+                    </GridPane>
+                </TitledPane>
+            </GridPane>
+        </Tab>
+        <Tab closable="false" text="tabs.twitter">
+            <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                    <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                    <RowConstraints vgrow="ALWAYS"/>
+                    <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                    <RowConstraints vgrow="NEVER"/>
+                    <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                </rowConstraints>
+
+                <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" text="accounts.twitter"
+                            GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                            <ColumnConstraints hgrow="NEVER"/>
+                            <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                            <ColumnConstraints hgrow="ALWAYS"/>
+                            <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="ALWAYS"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                        </rowConstraints>
+
+                        <Button text="accounts.buttons.add" prefHeight="50" prefWidth="50" textFill="#009900"
+                                GridPane.columnIndex="1"
+                                GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button text="accounts.buttons.moveup" prefHeight="50" prefWidth="50" GridPane.columnIndex="1"
+                                GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button text="accounts.buttons.movedown" prefHeight="50" prefWidth="50" GridPane.columnIndex="1"
+                                GridPane.rowIndex="5">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button text="accounts.buttons.remove" prefHeight="50" prefWidth="50" textFill="#FF0000"
+                                GridPane.columnIndex="1"
+                                GridPane.rowIndex="7">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button text="accounts.buttons.clear" prefHeight="50" prefWidth="50" textFill="#FF0000"
+                                GridPane.columnIndex="1"
+                                GridPane.rowIndex="9">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Button>
+
+                        <TableView GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="11">
+                            <columns>
+                                <TableColumn prefWidth="400" sortable="false" text="accounts.twitter.list.title"/>
+                                <TableColumn prefWidth="400" sortable="false" text="accounts.twitter.list.username"/>
+                            </columns>
+                        </TableView>
+                    </GridPane>
+                </TitledPane>
+
+                <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" text="accounts.twitter.details" GridPane.columnIndex="1"
+                            GridPane.rowIndex="3">
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                            <ColumnConstraints hgrow="NEVER"/>
+                            <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                            <ColumnConstraints hgrow="ALWAYS"/>
+                            <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            <RowConstraints vgrow="NEVER"/>
+                            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                        </rowConstraints>
+
+                        <!-- Pfad wählen -->
+                        <Label text="accounts.twitter.title" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Label text="strohi-no-binding" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                        <Label text="accounts.twitter.username" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                        <Label text="\@strohkoenig-no-binding" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+                        <Label text="accounts.twitter.hyperlink" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                        <Hyperlink text="https://twitter.com/strohkoenig-no-binding" onAction="#openTwitterLink" GridPane.columnIndex="3" GridPane.rowIndex="5"/>
+                    </GridPane>
+                </TitledPane>
+            </GridPane>
+        </Tab>
+    </TabPane>
+</GridPane>

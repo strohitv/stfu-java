@@ -105,7 +105,6 @@
                 <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
                 <ColumnConstraints hgrow="NEVER"/>
                 <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
-                <!--                prefWidth="150" maxWidth="150"-->
                 <ColumnConstraints hgrow="NEVER"/>
                 <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
             </columnConstraints>
