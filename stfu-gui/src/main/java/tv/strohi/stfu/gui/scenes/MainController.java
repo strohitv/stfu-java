@@ -54,10 +54,6 @@ public class MainController implements Initializable {
         App.setLocale(languageComboBox.getSelectionModel().getSelectedIndex() == 1 ? "en" : "de");
     }
 
-    public void openPathsScene(ActionEvent actionEvent) throws IOException {
-        showModal("scenes/paths", "subwindow.paths");
-    }
-
     private void showModal(String scenePath, String titleResourceKey) throws IOException {
         Scene scene = new Scene(App.loadFXML(scenePath));
 
@@ -66,5 +62,13 @@ public class MainController implements Initializable {
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.show();
+    }
+
+    public void openPathsStage(ActionEvent actionEvent) throws IOException {
+        showModal("scenes/paths", "subwindow.paths");
+    }
+
+    public void openAccountsStage(ActionEvent actionEvent) throws IOException {
+        showModal("scenes/accounts", "subwindow.accounts");
     }
 }
