@@ -1,216 +1,244 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="CENTER" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tv.strohi.stfu.gui.scenes.MainController">
+<?import tv.strohi.stfu.gui.i18n.I18N?>
+<GridPane alignment="CENTER" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="tv.strohi.stfu.gui.scenes.MainController" fx:id="mainPane">
+    <fx:define>
+        <I18N fx:id="i18n"/>
+    </fx:define>
+
     <columnConstraints>
-        <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+        <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
         <!-- Menu -->
         <!-- TabPane -->
         <!-- LoggedInLabel -->
-        <ColumnConstraints hgrow="NEVER" minWidth="100.0" />
-        <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+        <ColumnConstraints hgrow="NEVER" minWidth="100.0"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
         <!-- Menu -->
         <!-- TabPane -->
-        <ColumnConstraints hgrow="ALWAYS" minWidth="600.0" />
-        <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+        <ColumnConstraints hgrow="ALWAYS" minWidth="600.0"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="20.0" maxWidth="200.0"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
     </columnConstraints>
     <rowConstraints>
         <!-- Menu -->
-        <RowConstraints minHeight="5.0" vgrow="NEVER" />
-        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+        <RowConstraints minHeight="5.0" vgrow="NEVER"/>
+        <RowConstraints minHeight="10.0" vgrow="NEVER"/>
         <!-- TabPane -->
-        <RowConstraints minHeight="400.0" vgrow="ALWAYS" />
-        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+        <RowConstraints minHeight="400.0" vgrow="ALWAYS"/>
+        <RowConstraints minHeight="10.0" vgrow="NEVER"/>
         <!-- LoggedInLabel -->
-        <RowConstraints minHeight="5.0" vgrow="NEVER" />
-        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+        <RowConstraints minHeight="5.0" vgrow="NEVER"/>
+        <RowConstraints minHeight="10.0" vgrow="NEVER"/>
     </rowConstraints>
-    <MenuBar GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="0">
-        <Menu text="Datei">
-            <MenuItem text="Schließen" />
+    <MenuBar GridPane.columnIndex="0" GridPane.columnSpan="7" GridPane.rowIndex="0">
+        <Menu text="menu.file">
+            <MenuItem text="menu.file.close"/>
         </Menu>
-        <Menu text="Verwalten">
-            <MenuItem text="Accounts" />
-            <MenuItem text="Templates" />
-            <MenuItem text="Pfade" />
+        <Menu text="menu.manage">
+            <MenuItem text="menu.manage.accounts"/>
+            <MenuItem text="menu.manage.templates"/>
+            <MenuItem text="menu.manage.paths"/>
         </Menu>
-        <Menu text="Hilfe / Support">
-            <MenuItem text="Neue Funktionen" />
-            <SeparatorMenuItem />
-            <MenuItem text="Videotutorial-Playlist" />
-            <MenuItem text="Thread im LetsPlayForum" />
-            <MenuItem text="Thread im YoutubeForum" />
-            <MenuItem text="Discord-Server" />
-            <MenuItem text="strohi auf Twitter" />
-            <SeparatorMenuItem />
-            <MenuItem text="Download-Seite" />
-            <SeparatorMenuItem />
-            <MenuItem text="Fehlerverzeichnis öffnen" />
+        <Menu text="menu.help">
+            <MenuItem text="menu.help.releasenotes"/>
+            <SeparatorMenuItem/>
+            <MenuItem text="menu.help.videotut"/>
+            <MenuItem text="menu.help.lpfthread"/>
+            <MenuItem text="menu.help.ytfthread"/>
+            <MenuItem text="menu.help.discord"/>
+            <MenuItem text="menu.help.twitter"/>
+            <SeparatorMenuItem/>
+            <MenuItem text="menu.help.donwload"/>
+            <SeparatorMenuItem/>
+            <MenuItem text="menu.help.errordir"/>
         </Menu>
     </MenuBar>
 
-    <TabPane stylesheets="@css/tabpane.css" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2">
-        <Tab closable="false" text="Warteschlange">
+    <TabPane stylesheets="@css/tabpane.css" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="2">
+        <Tab closable="false" text="tab.queue">
             <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
                 <columnConstraints>
-                    <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                    <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" />
-                    <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+                    <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                    <ColumnConstraints hgrow="ALWAYS" minWidth="100.0"/>
+                    <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
                 </columnConstraints>
                 <rowConstraints>
-                    <RowConstraints minHeight="10.0" vgrow="NEVER" />
-                    <RowConstraints minHeight="20.0" vgrow="NEVER" />
-                    <RowConstraints minHeight="10.0" vgrow="NEVER" />
-                    <RowConstraints minHeight="150.0" vgrow="ALWAYS" />
-                    <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                    <RowConstraints minHeight="10.0" vgrow="NEVER"/>
+                    <RowConstraints minHeight="20.0" vgrow="NEVER"/>
+                    <RowConstraints minHeight="10.0" vgrow="NEVER"/>
+                    <RowConstraints minHeight="150.0" vgrow="ALWAYS"/>
+                    <RowConstraints minHeight="10.0" vgrow="NEVER"/>
                 </rowConstraints>
-                <TitledPane collapsible="false" text="Automatischer Videoupload" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <TitledPane collapsible="false" text="tab.queue.autoupload" GridPane.columnIndex="1"
+                            GridPane.rowIndex="1">
                     <GridPane>
                         <columnConstraints>
-                            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                            <ColumnConstraints hgrow="ALWAYS" minWidth="20.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="20.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+                            <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="20.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="20.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
                         </columnConstraints>
                         <rowConstraints>
-                            <RowConstraints minHeight="10.0" vgrow="NEVER" />
-                            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
-                            <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                            <RowConstraints minHeight="10.0" vgrow="NEVER"/>
+                            <RowConstraints minHeight="20.0" vgrow="ALWAYS"/>
+                            <RowConstraints minHeight="10.0" vgrow="NEVER"/>
                         </rowConstraints>
-                        <Label text="Der automatische Videoupload ist nicht aktiv" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <SplitMenuButton text="Sofort starten!" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <Label text="tab.queue.autoupload.notaktive" GridPane.columnIndex="1"
+                               GridPane.rowIndex="1"/>
+                        <SplitMenuButton text="tab.queue.autoupload.startnow" GridPane.columnIndex="3" GridPane.rowIndex="1">
                             <items>
-                                <MenuItem text="Zeiten festlegen und automatischen Videoupload starten" />
+                                <MenuItem text="tab.queue.autoupload.startwithoptions"/>
                             </items>
                         </SplitMenuButton>
                     </GridPane>
                 </TitledPane>
-                <TitledPane maxHeight="1.7976931348623157E308" collapsible="false" text="Warteschlange" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" text="tab.queue"
+                            GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <GridPane>
                         <columnConstraints>
-                            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="20.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="20.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="20.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="20.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="5.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="20.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                            <ColumnConstraints hgrow="ALWAYS" minWidth="50.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="20.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="20.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="20.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="20.0" />
-                            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+                            <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="20.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="20.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="20.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="20.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="5.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="20.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="50.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="20.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="20.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="20.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="20.0"/>
+                            <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
                         </columnConstraints>
                         <rowConstraints>
-                            <RowConstraints minHeight="10.0" vgrow="NEVER" />
-                            <RowConstraints minHeight="20.0" vgrow="NEVER" />
-                            <RowConstraints minHeight="10.0" vgrow="NEVER" />
-                            <RowConstraints minHeight="20.0" vgrow="NEVER" />
-                            <RowConstraints minHeight="200.0" vgrow="ALWAYS" />
-                            <RowConstraints minHeight="10.0" vgrow="NEVER" />
-                            <RowConstraints minHeight="20.0" vgrow="NEVER" />
-                            <RowConstraints minHeight="10.0" vgrow="NEVER" />
-                            <RowConstraints minHeight="20.0" vgrow="NEVER" />
-                            <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                            <RowConstraints minHeight="10.0" vgrow="NEVER"/>
+                            <RowConstraints minHeight="20.0" vgrow="NEVER"/>
+                            <RowConstraints minHeight="10.0" vgrow="NEVER"/>
+                            <RowConstraints minHeight="20.0" vgrow="NEVER"/>
+                            <RowConstraints minHeight="200.0" vgrow="ALWAYS"/>
+                            <RowConstraints minHeight="10.0" vgrow="NEVER"/>
+                            <RowConstraints minHeight="20.0" vgrow="NEVER"/>
+                            <RowConstraints minHeight="10.0" vgrow="NEVER"/>
+                            <RowConstraints minHeight="20.0" vgrow="NEVER"/>
+                            <RowConstraints minHeight="10.0" vgrow="NEVER"/>
                         </rowConstraints>
 
-                        <Button text="+" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button text="x" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button text="tab.queue.add" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Button text="tab.queue.removeall" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
-                        <ListView maxHeight="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.columnSpan="17" GridPane.rowIndex="1" GridPane.rowSpan="4">
+                        <ListView maxHeight="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.columnSpan="17"
+                                  GridPane.rowIndex="1" GridPane.rowSpan="4">
                             <!-- Wird noch ersetzt durch eigenes Control -->
                         </ListView>
 
-                        <CheckBox text="UploadGeschwindigkeit pro Job limitieren auf: " GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="6" />
-                        <Spinner max="10000" min="0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-                        <ComboBox GridPane.columnIndex="9" GridPane.rowIndex="6" />
+                        <CheckBox text="tab.queue.queue.limit" GridPane.columnIndex="3"
+                                  GridPane.columnSpan="3" GridPane.rowIndex="6"/>
+                        <Spinner max="10000" min="0" GridPane.columnIndex="7" GridPane.rowIndex="6"/>
+                        <ComboBox fx:id="speedComboBox" GridPane.columnIndex="9" GridPane.rowIndex="6"/>
 
-                        <Label text="Am Ende: " GridPane.columnIndex="3" GridPane.rowIndex="8" />
-                        <ComboBox maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.columnSpan="7" GridPane.rowIndex="8" />
-                        <CheckBox text="Programmenden abwarten" GridPane.columnIndex="13" GridPane.rowIndex="8" />
-                        <Button text="[...]" GridPane.columnIndex="15" GridPane.rowIndex="8" />
-                        <Label text="Die Warteschlange ist gestoppt" GridPane.columnIndex="17" GridPane.rowIndex="8" />
-                        <Button text="Warteschlange starten!" GridPane.columnIndex="19" GridPane.rowIndex="8" />
+                        <Label text="tab.queue.queue.afteruploadlabel" GridPane.columnIndex="3" GridPane.rowIndex="8"/>
+                        <ComboBox fx:id="finishedActionComboBox" maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.columnSpan="7"
+                                  GridPane.rowIndex="8"/>
+                        <CheckBox text="tab.queue.queue.waitforprograms" GridPane.columnIndex="13" GridPane.rowIndex="8"/>
+                        <Button text="tab.queue.queue.waitforprograms.browse" GridPane.columnIndex="15" GridPane.rowIndex="8"/>
+                        <Label text="tab.queue.queue.notrunning" GridPane.columnIndex="17" GridPane.rowIndex="8"/>
+                        <Button text="tab.queue.queue.startqueue" GridPane.columnIndex="19" GridPane.rowIndex="8"/>
                     </GridPane>
                 </TitledPane>
             </GridPane>
         </Tab>
-        <Tab closable="false" text="Zu überwachende Pfade">
-            <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px" >
+        <Tab closable="false" text="tab.paths">
+            <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
                 <columnConstraints>
-                    <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                    <ColumnConstraints hgrow="ALWAYS" minWidth="20.0" />
-                    <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+                    <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                    <ColumnConstraints hgrow="ALWAYS" minWidth="20.0"/>
+                    <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
                 </columnConstraints>
                 <rowConstraints>
-                    <RowConstraints minHeight="10.0" vgrow="NEVER" />
-                    <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
-                    <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                    <RowConstraints minHeight="10.0" vgrow="NEVER"/>
+                    <RowConstraints minHeight="20.0" vgrow="ALWAYS"/>
+                    <RowConstraints minHeight="10.0" vgrow="NEVER"/>
                 </rowConstraints>
 
                 <TableView maxHeight="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <columns>
-                        <TableColumn text="Pfad" prefWidth="600" sortable="false" />
-                        <TableColumn text="Filter" prefWidth="150" sortable="false" />
-                        <TableColumn text="Template" prefWidth="150" sortable="false" />
-                        <TableColumn text="Unterverzeichnisse" prefWidth="150" sortable="false" />
-                        <TableColumn text="Versteckte" prefWidth="150" sortable="false" />
-                        <TableColumn text="Inaktiv" prefWidth="150" sortable="false" />
-                        <TableColumn text="Verschieben" prefWidth="150" sortable="false" />
+                        <TableColumn prefWidth="600" sortable="false" text="tab.paths.path"/>
+                        <TableColumn prefWidth="150" sortable="false" text="tab.paths.filter"/>
+                        <TableColumn prefWidth="150" sortable="false" text="tab.paths.template"/>
+                        <TableColumn prefWidth="150" sortable="false" text="tab.paths.subdirs"/>
+                        <TableColumn prefWidth="150" sortable="false" text="tab.paths.hidden"/>
+                        <TableColumn prefWidth="150" sortable="false" text="tab.paths.disabled"/>
+                        <TableColumn prefWidth="150" sortable="false" text="tab.paths.moveafterupload"/>
                     </columns>
                 </TableView>
             </GridPane>
         </Tab>
-        <Tab closable="false" text="Videos, die nicht hochgeladen werden sollen">
-            <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px" >
+        <Tab closable="false" text="tab.archive">
+            <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
                 <columnConstraints>
-                    <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                    <ColumnConstraints hgrow="ALWAYS" minWidth="20.0" />
-                    <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                    <ColumnConstraints hgrow="NEVER" minWidth="20.0" />
-                    <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                    <ColumnConstraints hgrow="NEVER" minWidth="20.0" />
-                    <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-                    <ColumnConstraints hgrow="NEVER" minWidth="20.0" />
-                    <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+                    <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                    <ColumnConstraints hgrow="ALWAYS" minWidth="20.0"/>
+                    <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                    <ColumnConstraints hgrow="NEVER" minWidth="20.0"/>
+                    <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                    <ColumnConstraints hgrow="NEVER" minWidth="20.0"/>
+                    <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                    <ColumnConstraints hgrow="NEVER" minWidth="20.0"/>
+                    <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
                 </columnConstraints>
                 <rowConstraints>
-                    <RowConstraints minHeight="10.0" vgrow="NEVER" />
-                    <RowConstraints minHeight="20.0" vgrow="NEVER" />
-                    <RowConstraints minHeight="10.0" vgrow="NEVER" />
-                    <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
-                    <RowConstraints minHeight="10.0" vgrow="NEVER" />
-                    <RowConstraints minHeight="20.0" vgrow="NEVER" />
-                    <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                    <RowConstraints minHeight="10.0" vgrow="NEVER"/>
+                    <RowConstraints minHeight="20.0" vgrow="NEVER"/>
+                    <RowConstraints minHeight="10.0" vgrow="NEVER"/>
+                    <RowConstraints minHeight="20.0" vgrow="ALWAYS"/>
+                    <RowConstraints minHeight="10.0" vgrow="NEVER"/>
+                    <RowConstraints minHeight="20.0" vgrow="NEVER"/>
+                    <RowConstraints minHeight="10.0" vgrow="NEVER"/>
                 </rowConstraints>
 
-                <Label GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="7" wrapText="true" text="In dieser Liste findest du alle Videos, die vom Uploader nicht hochgeladen werden sollen. Videos, die erfolgreich hochgeladen wurden, werden beim Ende des Programms automatisch in diese Liste verschoben.&#xD;&#xD;Wenn du ein Video erneut hochladen möchtest, wähle es aus und klicke unten auf 'Aus Archiv löschen'.&#xD;Der Uploader vergisst das Video dann und wird es beim nächsten Start erneut zum Hochladen planen." />
+                <Label text="tab.archive.description"
+                       wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="7" GridPane.rowIndex="1"/>
 
-                <TableView maxHeight="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.columnSpan="7">
+                <TableView maxHeight="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.columnSpan="7"
+                           GridPane.rowIndex="3">
                     <columns>
-                        <TableColumn text="Video" prefWidth="800" sortable="false" />
-                        <TableColumn text="Pfad" prefWidth="600" sortable="false" />
+                        <TableColumn prefWidth="800" sortable="false" text="tab.archive.list.video"/>
+                        <TableColumn prefWidth="600" sortable="false" text="tab.archive.list.path"/>
                     </columns>
                 </TableView>
 
-                <Button text="Video hinzufügen" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                <Button text="In Warteschlange verschieben" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-                <Button text="Aus Archiv löschen" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                <Button onAction="#changeLanguage" text="tab.archive.add" GridPane.columnIndex="3"
+                        GridPane.rowIndex="5"/>
+                <Button text="tab.archive.move" GridPane.columnIndex="5" GridPane.rowIndex="5"/>
+                <Button text="tab.archive.remove" GridPane.columnIndex="7" GridPane.rowIndex="5"/>
             </GridPane>
         </Tab>
     </TabPane>
 
-    <Label text="Es sind aktuell 3 Konten verbunden." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Label text="window.connectedaccounts" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <ComboBox fx:id="languageComboBox" maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.rowIndex="4" >
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Deutsch"/>
+                <String fx:value="English"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
 </GridPane>
