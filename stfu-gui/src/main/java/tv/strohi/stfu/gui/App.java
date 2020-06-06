@@ -51,7 +51,7 @@ public class App extends Application {
         I18N.setLocale(App.locale);
     }
 
-    private static Parent loadFXML(String fxml) throws IOException {
+    public static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/tv/strohi/stfu/gui/" + fxml + ".fxml"));
         fxmlLoader.setResources(ResourceBundle.getBundle("bundles." + fxml.replace('/', '.')));
         return fxmlLoader.load();

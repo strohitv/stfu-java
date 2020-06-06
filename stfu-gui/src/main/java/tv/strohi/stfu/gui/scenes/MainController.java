@@ -4,12 +4,17 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Modality;
 import javafx.stage.Screen;
+import javafx.stage.Stage;
 import tv.strohi.stfu.gui.App;
+import tv.strohi.stfu.gui.i18n.I18N;
 import tv.strohi.stfu.gui.i18n.LocalizationBinder;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -47,5 +52,19 @@ public class MainController implements Initializable {
 
     public void changeLanguage(ActionEvent actionEvent) {
         App.setLocale(languageComboBox.getSelectionModel().getSelectedIndex() == 1 ? "en" : "de");
+    }
+
+    public void openPathsScene(ActionEvent actionEvent) throws IOException {
+        showModal("scenes/paths", "subwindow.paths");
+    }
+
+    private void showModal(String scenePath, String titleResourceKey) throws IOException {
+        Scene scene = new Scene(App.loadFXML(scenePath));
+
+        Stage stage = new Stage();
+        stage.setTitle(I18N.get("bundles.scenes.main", titleResourceKey));
+        stage.setScene(scene);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.show();
     }
 }
