@@ -4,9 +4,10 @@
 <?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<GridPane alignment="CENTER" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
-          fx:controller="tv.strohi.stfu.gui.scenes.MainController" fx:id="mainPane">
+<GridPane fx:id="mainPane" alignment="CENTER" xmlns="http://javafx.com/javafx/10.0.2-internal"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="tv.strohi.stfu.gui.scenes.MainController">
     <columnConstraints>
         <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
         <!-- Menu -->
@@ -18,7 +19,7 @@
         <!-- TabPane -->
         <ColumnConstraints hgrow="ALWAYS" minWidth="600.0"/>
         <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
-        <ColumnConstraints hgrow="NEVER" minWidth="20.0" maxWidth="200.0"/>
+        <ColumnConstraints hgrow="NEVER" maxWidth="200.0" minWidth="20.0"/>
         <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
     </columnConstraints>
     <rowConstraints>
@@ -86,9 +87,9 @@
                             <RowConstraints minHeight="20.0" vgrow="ALWAYS"/>
                             <RowConstraints minHeight="10.0" vgrow="NEVER"/>
                         </rowConstraints>
-                        <Label text="tab.queue.autoupload.notaktive" GridPane.columnIndex="1"
-                               GridPane.rowIndex="1"/>
-                        <SplitMenuButton text="tab.queue.autoupload.startnow" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <Label text="tab.queue.autoupload.notaktive" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <SplitMenuButton text="tab.queue.autoupload.startnow" GridPane.columnIndex="3"
+                                         GridPane.rowIndex="1">
                             <items>
                                 <MenuItem text="tab.queue.autoupload.startwithoptions"/>
                             </items>
@@ -134,24 +135,36 @@
                             <RowConstraints minHeight="10.0" vgrow="NEVER"/>
                         </rowConstraints>
 
-                        <Button text="tab.queue.add" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-                        <Button text="tab.queue.removeall" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                        <Button prefHeight="50" prefWidth="50" text="tab.queue.add" textFill="#009900"
+                                GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button prefHeight="50" prefWidth="50" text="tab.queue.removeall" textFill="RED"
+                                GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Button>
 
                         <ListView maxHeight="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.columnSpan="17"
                                   GridPane.rowIndex="1" GridPane.rowSpan="4">
                             <!-- Wird noch ersetzt durch eigenes Control -->
                         </ListView>
 
-                        <CheckBox text="tab.queue.queue.limit" GridPane.columnIndex="3"
-                                  GridPane.columnSpan="3" GridPane.rowIndex="6"/>
+                        <CheckBox text="tab.queue.queue.limit" GridPane.columnIndex="3" GridPane.columnSpan="3"
+                                  GridPane.rowIndex="6"/>
                         <Spinner max="10000" min="0" GridPane.columnIndex="7" GridPane.rowIndex="6"/>
                         <ComboBox fx:id="speedComboBox" GridPane.columnIndex="9" GridPane.rowIndex="6"/>
 
                         <Label text="tab.queue.queue.afteruploadlabel" GridPane.columnIndex="3" GridPane.rowIndex="8"/>
-                        <ComboBox fx:id="finishedActionComboBox" maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.columnSpan="7"
+                        <ComboBox fx:id="finishedActionComboBox" maxWidth="1.7976931348623157E308"
+                                  GridPane.columnIndex="5" GridPane.columnSpan="7" GridPane.rowIndex="8"/>
+                        <CheckBox text="tab.queue.queue.waitforprograms" GridPane.columnIndex="13"
                                   GridPane.rowIndex="8"/>
-                        <CheckBox text="tab.queue.queue.waitforprograms" GridPane.columnIndex="13" GridPane.rowIndex="8"/>
-                        <Button text="tab.queue.queue.waitforprograms.browse" GridPane.columnIndex="15" GridPane.rowIndex="8"/>
+                        <Button text="tab.queue.queue.waitforprograms.browse" GridPane.columnIndex="15"
+                                GridPane.rowIndex="8"/>
                         <Label text="tab.queue.queue.notrunning" GridPane.columnIndex="17" GridPane.rowIndex="8"/>
                         <Button text="tab.queue.queue.startqueue" GridPane.columnIndex="19" GridPane.rowIndex="8"/>
                     </GridPane>
@@ -207,8 +220,8 @@
                     <RowConstraints minHeight="10.0" vgrow="NEVER"/>
                 </rowConstraints>
 
-                <Label text="tab.archive.description"
-                       wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="7" GridPane.rowIndex="1"/>
+                <Label text="tab.archive.description" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="7"
+                       GridPane.rowIndex="1"/>
 
                 <TableView maxHeight="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.columnSpan="7"
                            GridPane.rowIndex="3">
@@ -218,8 +231,7 @@
                     </columns>
                 </TableView>
 
-                <Button text="tab.archive.add" GridPane.columnIndex="3"
-                        GridPane.rowIndex="5"/>
+                <Button text="tab.archive.add" GridPane.columnIndex="3" GridPane.rowIndex="5"/>
                 <Button text="tab.archive.move" GridPane.columnIndex="5" GridPane.rowIndex="5"/>
                 <Button text="tab.archive.remove" GridPane.columnIndex="7" GridPane.rowIndex="5"/>
             </GridPane>
@@ -228,7 +240,8 @@
 
     <Label text="window.connectedaccounts" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
 
-    <ComboBox fx:id="languageComboBox" maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.rowIndex="4" onAction="#changeLanguage">
+    <ComboBox fx:id="languageComboBox" maxWidth="1.7976931348623157E308" onAction="#changeLanguage"
+              GridPane.columnIndex="5" GridPane.rowIndex="4">
         <items>
             <FXCollections fx:factory="observableArrayList">
                 <String fx:value="Deutsch"/>
