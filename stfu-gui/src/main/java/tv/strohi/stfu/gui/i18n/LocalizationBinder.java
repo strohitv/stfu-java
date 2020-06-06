@@ -23,16 +23,20 @@ public final class LocalizationBinder {
                 addListeners(((MenuBar) component).getMenus().toArray(), resBundleName);
             } else if (component instanceof Menu) {
                 addListeners(((Menu) component).getItems().toArray(), resBundleName);
-                ((Menu) component).textProperty().bind(I18N.createStringBinding(resBundleName, ((Menu) component).getText()));
+                if (!((Menu) component).getText().contains("-no-binding")) {
+                    ((Menu) component).textProperty().bind(I18N.createStringBinding(resBundleName, ((Menu) component).getText()));
+                }
             } else if (component instanceof MenuItem) {
-                if (((MenuItem) component).getText() != null) {
+                if (((MenuItem) component).getText() != null && !((MenuItem) component).getText().contains("-no-binding")) {
                     ((MenuItem) component).textProperty().bind(I18N.createStringBinding(resBundleName, ((MenuItem) component).getText()));
                 }
             } else if (component instanceof TabPane) {
                 addListeners(((TabPane) component).getTabs().toArray(), resBundleName);
             } else if (component instanceof Tab) {
                 addListeners(List.of(((Tab) component).getContent()).toArray(), resBundleName);
-                ((Tab) component).textProperty().bind(I18N.createStringBinding(resBundleName, ((Tab) component).getText()));
+                if (!((Tab) component).getText().contains("-no-binding")) {
+                    ((Tab) component).textProperty().bind(I18N.createStringBinding(resBundleName, ((Tab) component).getText()));
+                }
             } else if (component instanceof TitledPane) {
                 addListeners(List.of(((TitledPane) component).getContent()).toArray(), resBundleName);
             } else if (component instanceof SplitMenuButton) {
@@ -40,10 +44,12 @@ public final class LocalizationBinder {
             } else if (component instanceof TableView<?>) {
                 addListeners(((TableView<?>) component).getColumns().toArray(), resBundleName);
             } else if (component instanceof TableColumn<?, ?>) {
-                ((TableColumn<?, ?>) component).textProperty().bind(I18N.createStringBinding(resBundleName, ((TableColumn<?, ?>) component).getText()));
+                if (!((TableColumn<?, ?>) component).getText().contains("-no-binding")) {
+                    ((TableColumn<?, ?>) component).textProperty().bind(I18N.createStringBinding(resBundleName, ((TableColumn<?, ?>) component).getText()));
+                }
             }
 
-            if (component instanceof Labeled) {
+            if (component instanceof Labeled && !((Labeled) component).getText().contains("-no-binding")) {
                 ((Labeled) component).textProperty().bind(I18N.createStringBinding(resBundleName, ((Labeled) component).getText()));
             }
         }
