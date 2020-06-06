@@ -3,8 +3,10 @@ package tv.strohi.stfu.gui.scenes;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Screen;
 import tv.strohi.stfu.gui.App;
 import tv.strohi.stfu.gui.i18n.LocalizationBinder;
 
@@ -37,6 +39,10 @@ public class MainController implements Initializable {
         speedComboBox.getSelectionModel().select(1);
         finishedActionComboBox.getSelectionModel().select(0);
         languageComboBox.getSelectionModel().select(App.getLocale().getLanguage().equalsIgnoreCase("de") ? 0 : 1);
+
+        Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+        mainPane.setPrefHeight(primaryScreenBounds.getHeight() * 0.8);
+        mainPane.setPrefWidth(primaryScreenBounds.getWidth() * 0.8);
     }
 
     public void changeLanguage(ActionEvent actionEvent) {

@@ -17,7 +17,7 @@
         <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
         <!-- Menu -->
         <!-- TabPane -->
-        <ColumnConstraints hgrow="ALWAYS" minWidth="600.0"/>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="400.0"/>
         <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
         <ColumnConstraints hgrow="NEVER" maxWidth="200.0" minWidth="20.0"/>
         <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
