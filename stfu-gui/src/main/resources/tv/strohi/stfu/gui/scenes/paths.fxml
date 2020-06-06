@@ -19,7 +19,7 @@
         <RowConstraints prefHeight="10" vgrow="NEVER"/>
     </rowConstraints>
 
-    <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" text="Eingestellte Pfade"
+    <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" text="paths"
                 GridPane.columnIndex="1" GridPane.rowIndex="1">
         <GridPane>
             <columnConstraints>
@@ -45,27 +45,30 @@
                 <RowConstraints prefHeight="10" vgrow="NEVER"/>
             </rowConstraints>
 
-            <Button text="+" prefHeight="50" prefWidth="50" textFill="#009900" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button text="paths.buttons.add" prefHeight="50" prefWidth="50" textFill="#009900" GridPane.columnIndex="1"
+                    GridPane.rowIndex="1">
                 <font>
                     <Font name="System Bold" size="24.0"/>
                 </font>
             </Button>
-            <Button text="↑" prefHeight="50" prefWidth="50" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button text="paths.buttons.moveup" prefHeight="50" prefWidth="50" GridPane.columnIndex="1" GridPane.rowIndex="3">
                 <font>
                     <Font name="System Bold" size="24.0"/>
                 </font>
             </Button>
-            <Button text="↓" prefHeight="50" prefWidth="50" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Button text="paths.buttons.movedown" prefHeight="50" prefWidth="50" GridPane.columnIndex="1" GridPane.rowIndex="5">
                 <font>
                     <Font name="System Bold" size="24.0"/>
                 </font>
             </Button>
-            <Button text="-" prefHeight="50" prefWidth="50" textFill="#FF0000" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <Button text="paths.buttons.remove" prefHeight="50" prefWidth="50" textFill="#FF0000" GridPane.columnIndex="1"
+                    GridPane.rowIndex="7">
                 <font>
                     <Font name="System Bold" size="24.0"/>
                 </font>
             </Button>
-            <Button text="x" prefHeight="50" prefWidth="50" textFill="#FF0000" GridPane.columnIndex="1" GridPane.rowIndex="9">
+            <Button text="paths.buttons.clear" prefHeight="50" prefWidth="50" textFill="#FF0000" GridPane.columnIndex="1"
+                    GridPane.rowIndex="9">
                 <font>
                     <Font name="System Bold" size="24.0"/>
                 </font>
@@ -73,20 +76,20 @@
 
             <TableView GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="11">
                 <columns>
-                    <TableColumn prefWidth="400" sortable="false" text="tab.paths.path"/>
-                    <TableColumn prefWidth="150" sortable="false" text="tab.paths.filter"/>
-                    <TableColumn prefWidth="150" sortable="false" text="tab.paths.template"/>
-                    <TableColumn prefWidth="150" sortable="false" text="tab.paths.subdirs"/>
-                    <TableColumn prefWidth="150" sortable="false" text="tab.paths.hidden"/>
-                    <TableColumn prefWidth="150" sortable="false" text="tab.paths.disabled"/>
-                    <TableColumn prefWidth="150" sortable="false" text="tab.paths.moveafterupload"/>
+                    <TableColumn prefWidth="400" sortable="false" text="paths.path"/>
+                    <TableColumn prefWidth="150" sortable="false" text="paths.filter"/>
+                    <TableColumn prefWidth="150" sortable="false" text="paths.template"/>
+                    <TableColumn prefWidth="150" sortable="false" text="paths.subdirs"/>
+                    <TableColumn prefWidth="150" sortable="false" text="paths.hidden"/>
+                    <TableColumn prefWidth="150" sortable="false" text="paths.disabled"/>
+                    <TableColumn prefWidth="150" sortable="false" text="paths.moveafterupload"/>
                 </columns>
             </TableView>
         </GridPane>
     </TitledPane>
 
-    <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" text="Pfad bearbeiten" GridPane.columnIndex="1"
-                GridPane.rowIndex="3">
+    <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" text="edit" GridPane.columnIndex="1"
+                GridPane.rowIndex="3" disable="true">
         <GridPane>
             <columnConstraints>
                 <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
@@ -102,6 +105,7 @@
                 <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
                 <ColumnConstraints hgrow="NEVER"/>
                 <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
+                <!--                prefWidth="150" maxWidth="150"-->
                 <ColumnConstraints hgrow="NEVER"/>
                 <ColumnConstraints hgrow="NEVER" prefWidth="10"/>
             </columnConstraints>
@@ -122,39 +126,42 @@
             </rowConstraints>
 
             <!-- Pfad wählen -->
-            <Label text="Pfad:" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label text="edit.path" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
             <TextField GridPane.columnIndex="5" GridPane.columnSpan="7" GridPane.rowIndex="1"/>
-            <Button text="Pfad wählen" maxWidth="1.7976931348623157E308" GridPane.columnIndex="13" GridPane.rowIndex="1"/>
+            <Button text="edit.path.select" maxWidth="1.7976931348623157E308" GridPane.columnIndex="13"
+                    GridPane.rowIndex="1"/>
 
             <!-- Dateifilter wählen / Unterverzeichnisse und versteckte Ordner -->
-            <Label text="Pfad:" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Label text="edit.filter" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
             <TextField GridPane.columnIndex="5" GridPane.columnSpan="5" GridPane.rowIndex="3"/>
-            <CheckBox text="Unterverzeichnisse" GridPane.columnIndex="11" GridPane.rowIndex="3"/>
-            <CheckBox text="Versteckte Ordner" GridPane.columnIndex="13" GridPane.rowIndex="3"/>
+            <CheckBox text="edit.subdirs" GridPane.columnIndex="11" GridPane.rowIndex="3"/>
+            <CheckBox text="edit.hidden" GridPane.columnIndex="13" GridPane.rowIndex="3"/>
 
             <!-- Template / Als hochgeladen markieren / Inaktiv -->
-            <Label text="Template:" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+            <Label text="edit.template" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
             <ComboBox maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.columnSpan="3"
                       GridPane.rowIndex="5"/>
-            <Button text="Alle Videos als hochgeladen markieren" maxWidth="1.7976931348623157E308" GridPane.columnIndex="9" GridPane.columnSpan="3"
+            <Button text="edit.markasuploaded" maxWidth="1.7976931348623157E308"
+                    GridPane.columnIndex="9" GridPane.columnSpan="3"
                     GridPane.rowIndex="5"/>
-            <CheckBox text="Pfad deaktivieren" GridPane.columnIndex="13" GridPane.rowIndex="5"/>
+            <CheckBox text="edit.deactivate" GridPane.columnIndex="13" GridPane.rowIndex="5"/>
 
             <!-- Nach Upload verschieben -->
-            <CheckBox text="Nach Upload verschieben" GridPane.columnIndex="1" GridPane.columnSpan="3"
+            <CheckBox text="edit.moveafterupload" GridPane.columnIndex="1" GridPane.columnSpan="3"
                       GridPane.rowIndex="7"/>
             <TextField GridPane.columnIndex="5" GridPane.columnSpan="7" GridPane.rowIndex="7"/>
-            <Button text="Zielordner wählen" maxWidth="1.7976931348623157E308" GridPane.columnIndex="13" GridPane.rowIndex="7"/>
+            <Button text="edit.moveafterupload.selectfolder" maxWidth="1.7976931348623157E308" GridPane.columnIndex="13"
+                    GridPane.rowIndex="7"/>
 
             <!-- Reihenfolge hinzugefügte Videos -->
-            <Label text="Reihenfolge hinzugefügte Videos:" GridPane.columnIndex="1" GridPane.columnSpan="3"
+            <Label text="edit.sortorder" GridPane.columnIndex="1" GridPane.columnSpan="3"
                    GridPane.rowIndex="9"/>
-            <ComboBox maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.columnSpan="9"
+            <ComboBox maxWidth="400" GridPane.columnIndex="5" GridPane.columnSpan="7"
                       GridPane.rowIndex="9"/>
 
             <!-- Bestätigungs- / Abbrechen-Button -->
-            <Button text="Speichern" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
-            <Button text="Abbrechen" GridPane.columnIndex="3" GridPane.rowIndex="11"/>
+            <Button text="edit.save" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
+            <Button text="edit.cancel" GridPane.columnIndex="3" GridPane.rowIndex="11"/>
         </GridPane>
     </TitledPane>
 </GridPane>
