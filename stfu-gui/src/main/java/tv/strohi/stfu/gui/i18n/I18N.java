@@ -5,6 +5,7 @@ import javafx.beans.binding.StringBinding;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.collections.ObservableMap;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -22,7 +23,7 @@ public final class I18N {
      * the current selected Locale.
      */
     private static final ObjectProperty<Locale> locale;
-    private static final Map<String, List<ObservableMap<String, String>>> comboBoxMaps = new HashMap<>();
+    private static final Map<String, List<ObservableMap<String[], ObservableList<String>>>> comboBoxMaps = new HashMap<>();
 
     static {
         locale = new SimpleObjectProperty<>(getDefaultLocale());
@@ -57,10 +58,13 @@ public final class I18N {
         localeProperty().set(locale);
         Locale.setDefault(locale);
 
-        for (Map.Entry<String, List<ObservableMap<String, String>>> resBundleMaps : comboBoxMaps.entrySet()){
-            for (ObservableMap<String, String> comboBoxBinding : resBundleMaps.getValue()) {
-                for (Map.Entry<String, String> entry : comboBoxBinding.entrySet()) {
-                    entry.setValue(get(resBundleMaps.getKey(), entry.getKey()));
+        for (Map.Entry<String, List<ObservableMap<String[], ObservableList<String>>>> resBundleMaps : comboBoxMaps.entrySet()){
+            for (ObservableMap<String[], ObservableList<String>> comboBoxBinding : resBundleMaps.getValue()) {
+                for (Map.Entry<String[], ObservableList<String>> entry : comboBoxBinding.entrySet()) {
+                    entry.getValue().clear();
+                    for (int i = 0; i < entry.getKey().length; i++) {
+                        entry.getValue().add(get(resBundleMaps.getKey(), entry.getKey()[i]));
+                    }
                 }
             }
         }
@@ -97,16 +101,19 @@ public final class I18N {
         }, locale);
     }
 
-    public static ObservableMap<String, String> registerComboBoxBinding(String resBundleName, String[] keys) {
-        ObservableMap<String, String> map = FXCollections.observableHashMap();
+    public static ObservableList<String> registerComboBoxBinding(String resBundleName, String[] keys) {
+        ObservableMap<String[], ObservableList<String>> map = FXCollections.observableHashMap();
 
         comboBoxMaps.computeIfAbsent(resBundleName, k -> new ArrayList<>()).add(map);
 
+        ObservableList<String> list = FXCollections.observableArrayList();
+        map.put(keys, list);
+
         for (String key : keys) {
-            map.put(key, get(resBundleName, key));
+            list.add(get(resBundleName, key));
         }
 
-        return map;
+        return list;
     }
 
     /**

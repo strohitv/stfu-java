@@ -5,13 +5,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import tv.strohi.stfu.gui.i18n.I18N?>
 <GridPane alignment="CENTER" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
           fx:controller="tv.strohi.stfu.gui.scenes.MainController" fx:id="mainPane">
-    <fx:define>
-        <I18N fx:id="i18n"/>
-    </fx:define>
-
     <columnConstraints>
         <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
         <!-- Menu -->
@@ -233,7 +228,7 @@
 
     <Label text="window.connectedaccounts" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
 
-    <ComboBox fx:id="languageComboBox" maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.rowIndex="4" >
+    <ComboBox maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.rowIndex="4" >
         <items>
             <FXCollections fx:factory="observableArrayList">
                 <String fx:value="Deutsch"/>
