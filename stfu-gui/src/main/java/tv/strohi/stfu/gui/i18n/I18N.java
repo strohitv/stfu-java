@@ -58,12 +58,11 @@ public final class I18N {
         localeProperty().set(locale);
         Locale.setDefault(locale);
 
-        for (Map.Entry<String, List<ObservableMap<String[], ObservableList<String>>>> resBundleMaps : comboBoxMaps.entrySet()){
+        for (Map.Entry<String, List<ObservableMap<String[], ObservableList<String>>>> resBundleMaps : comboBoxMaps.entrySet()) {
             for (ObservableMap<String[], ObservableList<String>> comboBoxBinding : resBundleMaps.getValue()) {
                 for (Map.Entry<String[], ObservableList<String>> entry : comboBoxBinding.entrySet()) {
-                    entry.getValue().clear();
                     for (int i = 0; i < entry.getKey().length; i++) {
-                        entry.getValue().add(get(resBundleMaps.getKey(), entry.getKey()[i]));
+                        entry.getValue().set(i, get(resBundleMaps.getKey(), entry.getKey()[i]));
                     }
                 }
             }

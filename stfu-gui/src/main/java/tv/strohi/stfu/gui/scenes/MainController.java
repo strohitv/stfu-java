@@ -40,10 +40,6 @@ public class MainController implements Initializable {
     }
 
     public void changeLanguage(ActionEvent actionEvent) {
-        if (languageComboBox.getSelectionModel().getSelectedIndex() == 1) {
-            App.setLocale("en");
-        } else {
-            App.setLocale("de");
-        }
+        App.setLocale(languageComboBox.getSelectionModel().getSelectedIndex() == 1 ? "en" : "de");
     }
 }
