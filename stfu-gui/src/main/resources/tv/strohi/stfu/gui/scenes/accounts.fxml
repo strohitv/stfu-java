@@ -63,7 +63,7 @@
 
                         <Button text="accounts.buttons.add" prefHeight="50" prefWidth="50" textFill="#009900"
                                 GridPane.columnIndex="1"
-                                GridPane.rowIndex="1">
+                                GridPane.rowIndex="1" onAction="#addYoutubeAccount">
                             <font>
                                 <Font name="System Bold" size="24.0"/>
                             </font>
