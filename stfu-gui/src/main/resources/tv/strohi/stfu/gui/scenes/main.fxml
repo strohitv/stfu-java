@@ -39,7 +39,7 @@
         </Menu>
         <Menu text="menu.manage">
             <MenuItem text="menu.manage.accounts" onAction="#openAccountsStage"/>
-            <MenuItem text="menu.manage.templates"/>
+            <MenuItem text="menu.manage.templates" onAction="#openTemplatesStage"/>
             <MenuItem text="menu.manage.paths" onAction="#openPathsStage"/>
         </Menu>
         <Menu text="menu.help">

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<SplitPane fx:id="mainPane" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="tv.strohi.stfu.gui.scenes.TemplatesController" dividerPositions="0.1f">
+    <GridPane prefWidth="350">
+        <columnConstraints>
+            <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+            <ColumnConstraints hgrow="NEVER"/>
+            <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+            <RowConstraints vgrow="NEVER"/>
+            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+            <RowConstraints vgrow="NEVER"/>
+            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+            <RowConstraints vgrow="NEVER"/>
+            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+            <RowConstraints vgrow="NEVER"/>
+            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+            <RowConstraints vgrow="NEVER"/>
+            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+            <RowConstraints vgrow="NEVER"/>
+            <RowConstraints vgrow="ALWAYS"/>
+            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+        </rowConstraints>
+
+        <Button text="accounts.buttons.add" prefHeight="50" prefWidth="50" textFill="#009900"
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button text="accounts.buttons.add" prefHeight="50" prefWidth="50" textFill="#009900"
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="3">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button text="accounts.buttons.moveup" prefHeight="50" prefWidth="50" GridPane.columnIndex="1"
+                GridPane.rowIndex="5">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button text="accounts.buttons.movedown" prefHeight="50" prefWidth="50" GridPane.columnIndex="1"
+                GridPane.rowIndex="7">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button text="accounts.buttons.remove" prefHeight="50" prefWidth="50" textFill="#FF0000"
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="9">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button text="accounts.buttons.clear" prefHeight="50" prefWidth="50" textFill="#FF0000"
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="11">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+
+        <TreeView GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="12" prefWidth="280">
+            <TreeItem value="Accounts" expanded="true">
+                <children>
+                    <TreeItem value="strohi" expanded="true">
+                        <children>
+                            <TreeItem value="Zelda" expanded="true"/>
+                            <TreeItem value="Mario Kart" expanded="true"/>
+                            <TreeItem value="Stream" expanded="true"/>
+                            <TreeItem value="Other" expanded="true"/>
+                        </children>
+                    </TreeItem>
+                    <TreeItem value="Espes" expanded="true">
+                        <children>
+                            <TreeItem value="Konzerte" expanded="true"/>
+                            <TreeItem value="Privates" expanded="true"/>
+                        </children>
+                    </TreeItem>
+                </children>
+            </TreeItem>
+        </TreeView>
+    </GridPane>
+
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+            <RowConstraints vgrow="ALWAYS"/>
+            <RowConstraints prefHeight="10" vgrow="NEVER"/>
+        </rowConstraints>
+
+        <TitledPane text="Template bearbeiten" GridPane.columnIndex="1" GridPane.rowIndex="1" maxHeight="Infinity"
+                    collapsible="false">
+            <GridPane>
+                <columnConstraints>
+                    <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                    <ColumnConstraints hgrow="NEVER"/>
+                    <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                    <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                    <ColumnConstraints hgrow="NEVER"/>
+                    <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                    <ColumnConstraints hgrow="NEVER"/>
+                    <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                    <RowConstraints vgrow="NEVER"/>
+                    <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                    <RowConstraints vgrow="ALWAYS"/>
+                    <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                    <RowConstraints vgrow="NEVER"/>
+                    <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                </rowConstraints>
+
+                <Label text="Name:" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                <CheckBox text="Expertenmodus anzeigen" GridPane.columnIndex="5" GridPane.rowIndex="1"
+                          GridPane.columnSpan="3"/>
+
+                <TabPane GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.columnSpan="7"
+                         stylesheets="@css/tabpane.css">
+                    <Tab text="Allgemein" closable="false">
+                        <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+                            <columnConstraints>
+                                <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                                <ColumnConstraints hgrow="NEVER"/>
+                                <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                                <ColumnConstraints hgrow="ALWAYS"/>
+                                <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                <RowConstraints vgrow="NEVER"/>
+                                <RowConstraints vgrow="NEVER"/>
+                                <RowConstraints prefHeight="5" vgrow="NEVER"/>
+                                <RowConstraints vgrow="NEVER"/>
+                                <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                <RowConstraints vgrow="NEVER"/>
+                                <RowConstraints prefHeight="200" vgrow="ALWAYS"/>
+                                <RowConstraints prefHeight="5" vgrow="NEVER"/>
+                                <RowConstraints vgrow="NEVER"/>
+                                <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                <RowConstraints vgrow="NEVER"/>
+                                <RowConstraints prefHeight="100" vgrow="ALWAYS"/>
+                                <RowConstraints prefHeight="5" vgrow="NEVER"/>
+                                <RowConstraints vgrow="NEVER"/>
+                                <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            </rowConstraints>
+
+                            <Label text="Titel:" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.columnSpan="3"/>
+
+                            <Label text="Länge Titel: 0 / 100 Zeichen" GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+
+                            <Label text="Beschreibung:" GridPane.columnIndex="1" GridPane.rowIndex="6"
+                                   GridPane.columnSpan="3"/>
+                            <TextArea GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.columnSpan="3"/>
+
+                            <Label text="Länge Beschreibung: 0 / 100 Zeichen" GridPane.columnIndex="3"
+                                   GridPane.rowIndex="9"/>
+
+                            <Label text="Tags:" GridPane.columnIndex="1" GridPane.rowIndex="11"
+                                   GridPane.columnSpan="3"/>
+                            <TextArea GridPane.columnIndex="1" GridPane.rowIndex="12" GridPane.columnSpan="3"/>
+
+                            <Label text="Länge Tags: 0 / 100 Zeichen" GridPane.columnIndex="3" GridPane.rowIndex="14"/>
+                        </GridPane>
+                    </Tab>
+                    <Tab text="Veröffentlichung" closable="false">
+                        <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+                            <columnConstraints>
+                                <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                                <ColumnConstraints hgrow="NEVER"/>
+                                <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                                <ColumnConstraints hgrow="ALWAYS"/>
+                                <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                <RowConstraints vgrow="NEVER"/>
+                                <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                <RowConstraints vgrow="NEVER"/>
+                                <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                <RowConstraints vgrow="ALWAYS"/>
+                                <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                            </rowConstraints>
+
+                            <Label text="Sichtbarkeit:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <ComboBox value="Privat" GridPane.columnIndex="3" GridPane.rowIndex="1" maxWidth="Infinity" />
+
+                            <CheckBox text="Video geplant veröffentlichen" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.columnSpan="3" />
+
+                            <TitledPane text="Veröffentlichungszeiten" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.columnSpan="3" collapsible="false" maxHeight="Infinity">
+                                <GridPane>
+                                    <columnConstraints>
+                                        <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                                        <ColumnConstraints hgrow="NEVER"/>
+                                        <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                                        <ColumnConstraints hgrow="NEVER"/>
+                                        <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                                        <ColumnConstraints hgrow="NEVER"/>
+                                        <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                                        <ColumnConstraints hgrow="NEVER"/>
+                                        <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                                        <ColumnConstraints hgrow="NEVER"/>
+                                        <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                                        <ColumnConstraints hgrow="NEVER"/>
+                                        <ColumnConstraints hgrow="ALWAYS"/>
+                                        <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                        <RowConstraints vgrow="NEVER"/>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                        <RowConstraints vgrow="NEVER"/>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                        <RowConstraints vgrow="NEVER"/>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                        <RowConstraints vgrow="NEVER"/>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                        <RowConstraints vgrow="NEVER"/>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                        <RowConstraints vgrow="NEVER"/>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                        <RowConstraints vgrow="NEVER"/>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                        <RowConstraints vgrow="NEVER"/>
+                                        <RowConstraints vgrow="ALWAYS"/>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                        <RowConstraints vgrow="NEVER"/>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                        <RowConstraints vgrow="NEVER"/>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                                    </rowConstraints>
+
+                                    <Button text="accounts.buttons.moveup" prefHeight="50" prefWidth="50" textFill="#009900"
+                                            GridPane.columnIndex="1"
+                                            GridPane.rowIndex="1">
+                                        <font>
+                                            <Font name="System Bold" size="24.0"/>
+                                        </font>
+                                    </Button>
+                                    <Button text="accounts.buttons.movedown" prefHeight="50" prefWidth="50" GridPane.columnIndex="1"
+                                            GridPane.rowIndex="3">
+                                        <font>
+                                            <Font name="System Bold" size="24.0"/>
+                                        </font>
+                                    </Button>
+                                    <Button text="accounts.buttons.addone" prefHeight="50" prefWidth="50" GridPane.columnIndex="1"
+                                            GridPane.rowIndex="5">
+                                        <font>
+                                            <Font name="System Bold" size="24.0"/>
+                                        </font>
+                                    </Button>
+                                    <Button text="accounts.buttons.reduceone" prefHeight="50" prefWidth="50" textFill="#FF0000"
+                                            GridPane.columnIndex="1"
+                                            GridPane.rowIndex="7">
+                                        <font>
+                                            <Font name="System Bold" size="24.0"/>
+                                        </font>
+                                    </Button>
+                                    <Button text="accounts.buttons.addseven" prefHeight="50" prefWidth="50" textFill="#FF0000"
+                                            GridPane.columnIndex="1"
+                                            GridPane.rowIndex="9">
+                                        <font>
+                                            <Font name="System Bold" size="24.0"/>
+                                        </font>
+                                    </Button>
+                                    <Button text="accounts.buttons.removeseven" prefHeight="50" prefWidth="50" textFill="#FF0000"
+                                            GridPane.columnIndex="1"
+                                            GridPane.rowIndex="11">
+                                        <font>
+                                            <Font name="System Bold" size="24.0"/>
+                                        </font>
+                                    </Button>
+                                    <Button text="accounts.buttons.remove" prefHeight="50" prefWidth="50" textFill="#FF0000"
+                                            GridPane.columnIndex="1"
+                                            GridPane.rowIndex="13">
+                                        <font>
+                                            <Font name="System Bold" size="24.0"/>
+                                        </font>
+                                    </Button>
+                                    <Button text="accounts.buttons.clear" prefHeight="50" prefWidth="50" textFill="#FF0000"
+                                            GridPane.columnIndex="1"
+                                            GridPane.rowIndex="15">
+                                        <font>
+                                            <Font name="System Bold" size="24.0"/>
+                                        </font>
+                                    </Button>
+
+                                    <TableView GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.columnSpan="10" GridPane.rowSpan="16" maxWidth="Infinity" maxHeight="Infinity">
+                                        <columns>
+                                            <TableColumn text="Wochentag" prefWidth="300" />
+                                            <TableColumn text="Zeit" prefWidth="300" />
+                                            <TableColumn text="Tage überspringen" prefWidth="300" />
+                                        </columns>
+                                    </TableView>
+
+                                    <Label text="Wochentag:" GridPane.columnIndex="3" GridPane.rowIndex="18" />
+                                    <ComboBox GridPane.columnIndex="5" GridPane.rowIndex="18" maxWidth="200" />
+                                    <Label text="Zeit:" GridPane.columnIndex="7" GridPane.rowIndex="18" />
+                                    <DatePicker GridPane.columnIndex="9" GridPane.rowIndex="18" />
+                                    <Button text="Hinzufügen" GridPane.columnIndex="11" GridPane.rowIndex="18" />
+
+                                    <!-- TODO: Ich brauch nen mixed DateTimePicker... -->
+                                    <Label text="Veröffentlichungsdatum nächstes Video:" GridPane.columnIndex="3" GridPane.rowIndex="20" GridPane.columnSpan="5" />
+                                    <DatePicker GridPane.columnIndex="9" GridPane.rowIndex="20" GridPane.columnSpan="3" maxWidth="Infinity" />
+                                </GridPane>
+                            </TitledPane>
+                        </GridPane>
+                    </Tab>
+                    <Tab text="Sonstiges" closable="false">
+                        <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+
+                        </GridPane>
+                    </Tab>
+                    <Tab text="Platzhalter" closable="false">
+                        <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+
+                        </GridPane>
+                    </Tab>
+                    <Tab text="Benachrichtigungen" closable="false">
+                        <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+
+                        </GridPane>
+                    </Tab>
+                    <Tab text="Twitter" closable="false">
+                        <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+
+                        </GridPane>
+                    </Tab>
+                    <Tab text="Java-Scripting (Expertenmodus)" closable="false">
+                        <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+
+                        </GridPane>
+                    </Tab>
+                </TabPane>
+
+                <Button text="Speichern" GridPane.columnIndex="5" GridPane.rowIndex="5"/>
+                <Button text="Abbrechen" GridPane.columnIndex="7" GridPane.rowIndex="5"/>
+            </GridPane>
+        </TitledPane>
+    </GridPane>
+</SplitPane>
