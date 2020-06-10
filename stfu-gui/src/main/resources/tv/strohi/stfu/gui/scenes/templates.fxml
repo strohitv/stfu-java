@@ -121,7 +121,7 @@
 
                 <Label text="template.edit.name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                <CheckBox text="template.edit.showexpert" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                <CheckBox prefWidth="300" maxWidth="Infinity" text="template.edit.showexpert" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="1" />
 
                 <TabPane stylesheets="@css/tabpane.css" GridPane.columnIndex="1" GridPane.columnSpan="7" GridPane.rowIndex="3">
                     <Tab closable="false" text="template.edit.tab.general">
@@ -216,7 +216,7 @@
                                     </rowConstraints>
 
                                     <Label text="template.edit.tab.publication.visibility" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <ComboBox maxWidth="Infinity" value="Privat" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <ComboBox prefWidth="200" maxWidth="Infinity" value="Privat" GridPane.columnIndex="3" GridPane.rowIndex="1" />
 
                                     <CheckBox text="template.edit.tab.publication.publishat" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
 
@@ -375,13 +375,13 @@
                                     </rowConstraints>
 
                                     <Label text="template.edit.tab.additional.category" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <ComboBox maxWidth="Infinity" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                                    <ComboBox prefWidth="200" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="1" />
 
                                     <Label text="template.edit.tab.additional.language" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                    <ComboBox maxWidth="Infinity" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+                                    <ComboBox prefWidth="200" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="3" />
 
                                     <Label text="template.edit.tab.additional.license" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                    <ComboBox maxWidth="Infinity" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="5" />
+                                    <ComboBox prefWidth="200" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="5" />
 
                                     <CheckBox text="template.edit.tab.additional.embed" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="7" />
 
@@ -524,7 +524,7 @@
                                 <RowConstraints prefHeight="10" vgrow="NEVER" />
                             </rowConstraints>
 
-                            <Label text="template.edit.tab.notifications.error" textFill="#FF0000" managed="true" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <Label text="template.edit.tab.notifications.error" textFill="#FF0000" managed="false" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                 <font>
                                     <Font name="System Bold" size="18.0" />
                                 </font>
