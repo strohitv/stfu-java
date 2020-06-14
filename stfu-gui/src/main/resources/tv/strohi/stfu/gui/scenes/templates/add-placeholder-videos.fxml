@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="mainPane" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="tv.strohi.stfu.gui.scenes.templates.AddPlaceholderVideosController">
+    <columnConstraints>
+        <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+        <ColumnConstraints hgrow="NEVER"/>
+        <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+        <ColumnConstraints hgrow="ALWAYS"/>
+        <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="10" vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints prefHeight="10" vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints prefHeight="10" vgrow="NEVER" />
+        <RowConstraints vgrow="ALWAYS" />
+        <RowConstraints prefHeight="10" vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints prefHeight="10" vgrow="NEVER" />
+    </rowConstraints>
+
+    <Label text="main.description" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="3" />
+
+    <Label text="main.filename" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+    <TitledPane collapsible="false" text="multi.title" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.columnSpan="3">
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                <ColumnConstraints hgrow="NEVER"/>
+                <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+                <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+            </rowConstraints>
+
+            <Label text="multi.description" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="3" />
+
+            <Label text="multi.lowest" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Spinner min="0" max="99999999" editable="true" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+            <Label text="multi.highest" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Spinner min="0" max="99999999" editable="true" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+
+            <Label text="multi.leadingzeroes" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Spinner min="0" max="9" editable="true" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+        </GridPane>
+    </TitledPane>
+
+    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.columnSpan="3">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+            <ColumnConstraints hgrow="NEVER"/>
+            <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+            <ColumnConstraints hgrow="NEVER"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="ALWAYS" />
+        </rowConstraints>
+
+        <Button text="buttons.save" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Button text="buttons.cancel" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+    </GridPane>
+</GridPane>

@@ -37,7 +37,7 @@ public final class LocalizationBinder {
                 if (!((Tab) component).getText().contains("-no-binding")) {
                     ((Tab) component).textProperty().bind(I18N.createStringBinding(resBundleName, ((Tab) component).getText()));
                 }
-            } else if (component instanceof TitledPane) {
+            } else if (component instanceof TitledPane && ((TitledPane) component).getContent() != null) {
                 addListeners(List.of(((TitledPane) component).getContent()).toArray(), resBundleName);
             } else if (component instanceof SplitMenuButton) {
                 addListeners(((SplitMenuButton) component).getItems().toArray(), resBundleName);

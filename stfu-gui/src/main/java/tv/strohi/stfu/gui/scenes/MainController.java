@@ -36,7 +36,7 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        LocalizationBinder.addListeners(mainPane.getChildren().toArray(),"bundles.scenes.main");
+        LocalizationBinder.addListeners(mainPane.getChildren().toArray(), "bundles.scenes.main");
 
         LocalizationBinder.addComboboxListener(speedComboBox, "bundles.scenes.main", "tab.queue.queue.limit.kbyte", "tab.queue.queue.limit.mbyte", "tab.queue.queue.limit.gbyte", "tab.queue.queue.limit.tbyte");
         LocalizationBinder.addComboboxListener(finishedActionComboBox, "bundles.scenes.main", "tab.queue.queue.afterupload.nothing", "tab.queue.queue.afterupload.close", "tab.queue.queue.afterupload.shutdown");
@@ -54,21 +54,26 @@ public class MainController implements Initializable {
         App.setLocale(languageComboBox.getSelectionModel().getSelectedIndex() == 1 ? "en" : "de");
     }
 
-    private void showModal(String scenePath, String titleResourceKey) throws IOException {
+    private void showModal(String scenePath, String titleResourceKey, boolean maximize) throws IOException {
         Scene scene = new Scene(App.loadFXML(scenePath));
 
         Stage stage = new Stage();
         stage.setTitle(I18N.get("bundles.scenes.main", titleResourceKey));
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setMaximized(maximize);
         stage.show();
     }
 
     public void openPathsStage(ActionEvent actionEvent) throws IOException {
-        showModal("scenes/paths", "subwindow.paths");
+        showModal("scenes/paths", "subwindow.paths", false);
     }
 
     public void openAccountsStage(ActionEvent actionEvent) throws IOException {
-        showModal("scenes/accounts", "subwindow.accounts");
+        showModal("scenes/accounts", "subwindow.accounts", false);
+    }
+
+    public void openTemplatesStage(ActionEvent actionEvent) throws IOException {
+        showModal("scenes/templates/templates", "subwindow.templates", true);
     }
 }

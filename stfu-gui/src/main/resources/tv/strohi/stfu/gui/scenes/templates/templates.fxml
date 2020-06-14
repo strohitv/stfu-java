@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane fx:id="mainPane" dividerPositions="0.1" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tv.strohi.stfu.gui.scenes.templates.TemplatesController">
+    <GridPane prefWidth="350">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+            <ColumnConstraints hgrow="NEVER" />
+            <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+            <ColumnConstraints hgrow="ALWAYS" />
+            <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints prefHeight="10" vgrow="NEVER" />
+            <RowConstraints vgrow="NEVER" />
+            <RowConstraints prefHeight="10" vgrow="NEVER" />
+            <RowConstraints vgrow="NEVER" />
+            <RowConstraints prefHeight="10" vgrow="NEVER" />
+            <RowConstraints vgrow="NEVER" />
+            <RowConstraints prefHeight="10" vgrow="NEVER" />
+            <RowConstraints vgrow="NEVER" />
+            <RowConstraints prefHeight="10" vgrow="NEVER" />
+            <RowConstraints vgrow="NEVER" />
+            <RowConstraints prefHeight="10" vgrow="NEVER" />
+            <RowConstraints vgrow="NEVER" />
+            <RowConstraints vgrow="ALWAYS" />
+            <RowConstraints prefHeight="10" vgrow="NEVER" />
+        </rowConstraints>
+
+        <Button prefHeight="50" prefWidth="50" text="templates.buttons.add" textFill="#009900" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Button>
+        <Button prefHeight="50" prefWidth="50" text="templates.buttons.copy" textFill="#009900" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Button>
+        <Button prefHeight="50" prefWidth="50" text="templates.buttons.moveup" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Button>
+        <Button prefHeight="50" prefWidth="50" text="templates.buttons.movedown" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Button>
+        <Button prefHeight="50" prefWidth="50" text="templates.buttons.remove" textFill="#FF0000" GridPane.columnIndex="1" GridPane.rowIndex="9">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Button>
+        <Button prefHeight="50" prefWidth="50" text="templates.buttons.clear" textFill="#FF0000" GridPane.columnIndex="1" GridPane.rowIndex="11">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Button>
+
+        <TreeView prefWidth="280" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="12">
+            <TreeItem expanded="true" value="Accounts">
+                <children>
+                    <TreeItem expanded="true" value="strohi">
+                        <children>
+                            <TreeItem expanded="true" value="Zelda" />
+                            <TreeItem expanded="true" value="Mario Kart" />
+                            <TreeItem expanded="true" value="Stream" />
+                            <TreeItem expanded="true" value="Other" />
+                        </children>
+                    </TreeItem>
+                    <TreeItem expanded="true" value="Espes">
+                        <children>
+                            <TreeItem expanded="true" value="Konzerte" />
+                            <TreeItem expanded="true" value="Privates" />
+                        </children>
+                    </TreeItem>
+                </children>
+            </TreeItem>
+        </TreeView>
+    </GridPane>
+
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+            <ColumnConstraints hgrow="ALWAYS" />
+            <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints prefHeight="10" vgrow="NEVER" />
+            <RowConstraints vgrow="ALWAYS" />
+            <RowConstraints prefHeight="10" vgrow="NEVER" />
+        </rowConstraints>
+
+        <TitledPane collapsible="false" maxHeight="Infinity" text="template.edit" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane>
+                <columnConstraints>
+                    <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                    <ColumnConstraints hgrow="NEVER" />
+                    <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                    <ColumnConstraints hgrow="ALWAYS" />
+                    <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                    <ColumnConstraints hgrow="NEVER" prefWidth="40" />
+                    <ColumnConstraints hgrow="NEVER" />
+                    <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                    <ColumnConstraints hgrow="NEVER" />
+                    <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints prefHeight="10" vgrow="NEVER" />
+                    <RowConstraints vgrow="NEVER" />
+                    <RowConstraints prefHeight="10" vgrow="NEVER" />
+                    <RowConstraints vgrow="ALWAYS" />
+                    <RowConstraints prefHeight="10" vgrow="NEVER" />
+                    <RowConstraints vgrow="NEVER" />
+                    <RowConstraints prefHeight="10" vgrow="NEVER" />
+                </rowConstraints>
+
+                <Label text="template.edit.name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <CheckBox text="template.edit.showexpert" GridPane.columnIndex="5" GridPane.columnSpan="4" GridPane.rowIndex="1" />
+
+                <TabPane stylesheets="@../css/tabpane.css" GridPane.columnIndex="1" GridPane.columnSpan="8" GridPane.rowIndex="3">
+                    <Tab closable="false" text="template.edit.tab.general">
+                        <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                <ColumnConstraints hgrow="ALWAYS" />
+                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                <RowConstraints vgrow="ALWAYS" />
+                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                            </rowConstraints>
+
+                            <TitledPane collapsible="false" maxHeight="Infinity" text="template.edit.tab.general.data" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <GridPane>
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                        <ColumnConstraints hgrow="NEVER" />
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                        <ColumnConstraints hgrow="ALWAYS" />
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="5" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="200" vgrow="ALWAYS" />
+                                        <RowConstraints prefHeight="5" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="100" vgrow="ALWAYS" />
+                                        <RowConstraints prefHeight="5" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                    </rowConstraints>
+
+                                    <Label text="template.edit.tab.general.title" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+
+                                    <Label text="template.edit.tab.general.titlelength" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+
+                                    <Label text="template.edit.tab.general.description" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="6" />
+                                    <TextArea GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7" />
+
+                                    <Label text="template.edit.tab.general.descriptionlength" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+
+                                    <Label text="template.edit.tab.general.tags" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="11" />
+                                    <TextArea GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="12" />
+
+                                    <Label text="template.edit.tab.general.tagslength" GridPane.columnIndex="3" GridPane.rowIndex="14" />
+                                </GridPane>
+                            </TitledPane>
+                        </GridPane>
+                    </Tab>
+                    <Tab closable="false" text="template.edit.tab.publication">
+                        <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                <ColumnConstraints hgrow="ALWAYS" />
+                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                <RowConstraints vgrow="ALWAYS" />
+                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                            </rowConstraints>
+
+                            <TitledPane collapsible="false" maxHeight="Infinity" text="template.edit.tab.publication.header" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <GridPane>
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                        <ColumnConstraints hgrow="NEVER" />
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                        <ColumnConstraints hgrow="ALWAYS" />
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="ALWAYS" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                    </rowConstraints>
+
+                                    <Label text="template.edit.tab.publication.visibility" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <ComboBox prefWidth="200" maxWidth="Infinity" value="Privat" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                                    <CheckBox text="template.edit.tab.publication.publishat" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+
+                                    <TitledPane collapsible="false" maxHeight="Infinity" text="template.edit.tab.publication.publishtimes" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="5">
+                                        <GridPane>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                                <ColumnConstraints hgrow="NEVER" />
+                                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                                <ColumnConstraints hgrow="NEVER" />
+                                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                                <ColumnConstraints hgrow="NEVER" />
+                                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                                <ColumnConstraints hgrow="NEVER" />
+                                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                                <ColumnConstraints hgrow="NEVER" />
+                                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                                <ColumnConstraints hgrow="NEVER" />
+                                                <ColumnConstraints hgrow="ALWAYS" />
+                                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints vgrow="ALWAYS" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                            </rowConstraints>
+
+                                            <Button prefHeight="50" prefWidth="50" text="templates.buttons.moveup" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                <font>
+                                                    <Font name="System Bold" size="24.0" />
+                                                </font>
+                                            </Button>
+                                            <Button prefHeight="50" prefWidth="50" text="templates.buttons.movedown" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                <font>
+                                                    <Font name="System Bold" size="24.0" />
+                                                </font>
+                                            </Button>
+                                            <Button prefHeight="50" prefWidth="50" text="templates.buttons.addone" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                <font>
+                                                    <Font name="System Bold" size="18.0" />
+                                                </font>
+                                            </Button>
+                                            <Button prefHeight="50" prefWidth="50" text="templates.buttons.removeone" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                                <font>
+                                                    <Font name="System Bold" size="18.0" />
+                                                </font>
+                                            </Button>
+                                            <Button prefHeight="50" prefWidth="50" text="templates.buttons.addseven" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                                <font>
+                                                    <Font name="System Bold" size="18.0" />
+                                                </font>
+                                            </Button>
+                                            <Button prefHeight="50" prefWidth="50" text="templates.buttons.removeseven" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                                <font>
+                                                    <Font name="System Bold" size="18.0" />
+                                                </font>
+                                            </Button>
+                                            <Button prefHeight="50" prefWidth="50" text="templates.buttons.remove" textFill="#FF0000" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                                                <font>
+                                                    <Font name="System Bold" size="24.0" />
+                                                </font>
+                                            </Button>
+                                            <Button prefHeight="50" prefWidth="50" text="templates.buttons.clear" textFill="#FF0000" GridPane.columnIndex="1" GridPane.rowIndex="15">
+                                                <font>
+                                                    <Font name="System Bold" size="24.0" />
+                                                </font>
+                                            </Button>
+
+                                            <TableView maxHeight="Infinity" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.columnSpan="10" GridPane.rowIndex="1" GridPane.rowSpan="16">
+                                                <columns>
+                                                    <TableColumn prefWidth="300" text="template.edit.tab.publication.header.weekday" />
+                                                    <TableColumn prefWidth="300" text="template.edit.tab.publication.header.time" />
+                                                    <TableColumn prefWidth="300" text="template.edit.tab.publication.header.skipdays" />
+                                                </columns>
+                                            </TableView>
+
+                                            <Label text="template.edit.tab.publication.weekday.add" GridPane.columnIndex="3" GridPane.rowIndex="18" />
+                                            <ComboBox maxWidth="200" GridPane.columnIndex="5" GridPane.rowIndex="18" />
+                                            <Label text="template.edit.tab.publication.time.add" GridPane.columnIndex="7" GridPane.rowIndex="18" />
+                                            <DatePicker GridPane.columnIndex="9" GridPane.rowIndex="18" />
+                                            <Button text="template.edit.tab.publication.add" GridPane.columnIndex="11" GridPane.rowIndex="18" />
+
+                                            <!-- TODO: Ich brauch nen mixed DateTimePicker... -->
+                                            <Label text="template.edit.tab.publication.nextpublicationdate" GridPane.columnIndex="3" GridPane.columnSpan="5" GridPane.rowIndex="20" />
+                                            <DatePicker maxWidth="Infinity" GridPane.columnIndex="9" GridPane.columnSpan="3" GridPane.rowIndex="20" />
+                                        </GridPane>
+                                    </TitledPane>
+                                </GridPane>
+                            </TitledPane>
+                        </GridPane>
+                    </Tab>
+                    <Tab closable="false" text="template.edit.tab.additional">
+                        <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                <ColumnConstraints hgrow="ALWAYS" />
+                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                <RowConstraints vgrow="ALWAYS" />
+                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                            </rowConstraints>
+
+                            <TitledPane collapsible="false" maxHeight="Infinity" text="template.edit.tab.additional.header" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <GridPane>
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                        <ColumnConstraints hgrow="NEVER" />
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                        <ColumnConstraints hgrow="ALWAYS" />
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                        <ColumnConstraints hgrow="NEVER" />
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints vgrow="ALWAYS" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                    </rowConstraints>
+
+                                    <Label text="template.edit.tab.additional.category" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <ComboBox prefWidth="200" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+
+                                    <Label text="template.edit.tab.additional.language" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <ComboBox prefWidth="200" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+
+                                    <Label text="template.edit.tab.additional.license" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <ComboBox prefWidth="200" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="5" />
+
+                                    <CheckBox text="template.edit.tab.additional.embed" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="7" />
+
+                                    <CheckBox text="template.edit.tab.additional.statistics" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="9" />
+
+                                    <Label text="template.edit.tab.additional.thumbnail" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                    <TextField maxWidth="Infinity" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+                                    <Button maxWidth="Infinity" text="template.edit.tab.additional.thumbnail.browse" GridPane.columnIndex="5" GridPane.rowIndex="11" />
+
+                                    <CheckBox text="template.edit.tab.additional.sendnotifications" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="13" />
+
+                                    <CheckBox text="template.edit.tab.additional.colorcorrection" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="15" />
+
+                                    <CheckBox text="template.edit.tab.additional.stabilize" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="17" />
+                                </GridPane>
+                            </TitledPane>
+                        </GridPane>
+                    </Tab>
+                    <Tab closable="false" text="template.edit.tab.placeholder">
+                        <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                <ColumnConstraints hgrow="ALWAYS" />
+                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                <RowConstraints vgrow="ALWAYS" />
+                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                            </rowConstraints>
+
+                            <TitledPane collapsible="false" maxHeight="Infinity" text="template.edit.tab.placeholder.header" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <GridPane>
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                        <ColumnConstraints hgrow="ALWAYS" />
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="ALWAYS" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="ALWAYS" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                    </rowConstraints>
+
+                                    <TitledPane collapsible="false" maxHeight="Infinity" text="template.edit.tab.placeholder.filenames" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                        <GridPane>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                                <ColumnConstraints hgrow="NEVER" />
+                                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                                <ColumnConstraints hgrow="ALWAYS" />
+                                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints vgrow="ALWAYS" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                            </rowConstraints>
+
+                                            <Button prefHeight="50" prefWidth="50" text="templates.buttons.add" textFill="#009900" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#addPlaceholderFilenames">
+                                                <font>
+                                                    <Font name="System Bold" size="24.0" />
+                                                </font>
+                                            </Button>
+                                            <Button prefHeight="50" prefWidth="50" text="templates.buttons.remove" textFill="#FF0000" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                <font>
+                                                    <Font name="System Bold" size="24.0" />
+                                                </font>
+                                            </Button>
+                                            <Button prefHeight="50" prefWidth="50" text="templates.buttons.clear" textFill="#FF0000" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                <font>
+                                                    <Font name="System Bold" size="24.0" />
+                                                </font>
+                                            </Button>
+
+                                            <TableView prefHeight="200" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="6">
+                                                <columns>
+                                                    <TableColumn prefWidth="500" text="template.edit.tab.placeholder.filenames.name" />
+                                                    <TableColumn prefWidth="200" text="template.edit.tab.placeholder.filenames.allfiled" />
+                                                </columns>
+                                            </TableView>
+                                        </GridPane>
+                                    </TitledPane>
+
+                                    <TitledPane collapsible="false" maxHeight="Infinity" text="template.edit.tab.placeholder.edit" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                        <GridPane>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                                <ColumnConstraints hgrow="NEVER" />
+                                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                                <ColumnConstraints hgrow="ALWAYS" />
+                                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="ALWAYS" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                                <RowConstraints vgrow="NEVER" />
+                                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                            </rowConstraints>
+
+                                            <TableView prefHeight="200" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                                                <columns>
+                                                    <TableColumn prefWidth="200" text="template.edit.tab.placeholder.edit.header.placeholder" />
+                                                    <TableColumn prefWidth="500" text="template.edit.tab.placeholder.edit.header.replacement" />
+                                                </columns>
+                                            </TableView>
+
+                                            <Label text="template.edit.tab.placeholder.edit.placeholder" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                            <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+                                            <Label text="template.edit.tab.placeholder.edit.replacement" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                            <TextField GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                        </GridPane>
+                                    </TitledPane>
+                                </GridPane>
+                            </TitledPane>
+                        </GridPane>
+                    </Tab>
+                    <Tab closable="false" text="template.edit.tab.notifications">
+                        <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                <ColumnConstraints hgrow="ALWAYS" />
+                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                <RowConstraints vgrow="NEVER" />
+                                <RowConstraints vgrow="ALWAYS" />
+                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                            </rowConstraints>
+
+                            <Label text="template.edit.tab.notifications.error" textFill="#FF0000" managed="false" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <font>
+                                    <Font name="System Bold" size="18.0" />
+                                </font>
+                        <GridPane.margin>
+                           <Insets bottom="10.0" />
+                        </GridPane.margin>
+                            </Label>
+                            <TitledPane collapsible="false" maxHeight="Infinity" text="template.edit.tab.notifications.header" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                <GridPane>
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                        <ColumnConstraints hgrow="NEVER" />
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                        <ColumnConstraints hgrow="ALWAYS" />
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                        <ColumnConstraints hgrow="ALWAYS" />
+                                        <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints prefHeight="30" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints vgrow="ALWAYS" />
+                                        <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                    </rowConstraints>
+
+                                    <Label text="template.edit.tab.notifications.foundnew" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <CheckBox text="template.edit.tab.notifications.desktop" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <CheckBox text="template.edit.tab.notifications.mail" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+
+                                    <Label text="template.edit.tab.notifications.started" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <CheckBox text="template.edit.tab.notifications.desktop" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                    <CheckBox text="template.edit.tab.notifications.mail" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+
+                                    <Label text="template.edit.tab.notifications.finished" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <CheckBox text="template.edit.tab.notifications.desktop" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                    <CheckBox text="template.edit.tab.notifications.mail" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+
+                                    <Label text="template.edit.tab.notifications.failed" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <CheckBox text="template.edit.tab.notifications.desktop" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                    <CheckBox text="template.edit.tab.notifications.mail" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+
+                                    <Label text="template.edit.tab.notifications.receiver" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <TextField GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+                                </GridPane>
+                            </TitledPane>
+                        </GridPane>
+                    </Tab>
+                    <Tab closable="false" text="template.edit.tab.twitter">
+                        <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                <ColumnConstraints hgrow="ALWAYS" />
+                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                <RowConstraints vgrow="ALWAYS" />
+                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                            </rowConstraints>
+
+                            <TitledPane collapsible="false" maxHeight="Infinity" text="template.edit.tab.twitter.header" GridPane.columnIndex="1" GridPane.rowIndex="1">
+
+                            </TitledPane>
+                        </GridPane>
+                    </Tab>
+                    <Tab closable="false" text="template.edit.tab.scripting">
+                        <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                                <ColumnConstraints hgrow="ALWAYS" />
+                                <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                                <RowConstraints vgrow="ALWAYS" />
+                                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                            </rowConstraints>
+
+                            <TitledPane collapsible="false" maxHeight="Infinity" text="template.edit.tab.scripting.header" GridPane.columnIndex="1" GridPane.rowIndex="1">
+
+                            </TitledPane>
+                        </GridPane>
+                    </Tab>
+                </TabPane>
+
+                <Button text="templates.buttons.save" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                <Button text="templates.buttons.cancel" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+            </GridPane>
+        </TitledPane>
+    </GridPane>
+</SplitPane>

@@ -94,7 +94,7 @@ public final class I18N {
      */
     public static StringBinding createStringBinding(final String resBundleName, final String key, Object... args) {
         return Bindings.createStringBinding(() -> {
-            String result = get(resBundleName, key, args);
+            String result = get(resBundleName, key, args).replace("&#13;", System.lineSeparator());
             System.out.println();
             return result;
         }, locale);
