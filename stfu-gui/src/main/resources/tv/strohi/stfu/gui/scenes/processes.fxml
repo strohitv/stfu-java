@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane fx:id="mainPane" xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="tv.strohi.stfu.gui.scenes.ProcessesController">
+    <columnConstraints>
+        <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+        <ColumnConstraints hgrow="ALWAYS" />
+        <ColumnConstraints hgrow="NEVER" />
+        <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+        <ColumnConstraints hgrow="NEVER" />
+        <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+        <ColumnConstraints hgrow="NEVER" />
+        <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="10" vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints prefHeight="10" vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints prefHeight="10" vgrow="NEVER" />
+    </rowConstraints>
+
+    <TitledPane text="title" collapsible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="6">
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                <RowConstraints vgrow="ALWAYS" />
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+            </rowConstraints>
+
+            <TableView GridPane.columnIndex="1" GridPane.rowIndex="1" maxHeight="Infinity" maxWidth="Infinity">
+                <columns>
+                    <TableColumn prefWidth="25" />
+                    <TableColumn text="table.header.name" prefWidth="400" />
+                    <TableColumn text="table.header.description" prefWidth="400" />
+                </columns>
+            </TableView>
+        </GridPane>
+    </TitledPane>
+
+    <Button text="button.submit" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+    <Button text="button.refresh" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+    <Button text="button.cancel" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+</GridPane>
