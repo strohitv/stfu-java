@@ -23,7 +23,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("scenes/main"));
-        stage.setTitle("Strohis Toolset Für Upload - " + Version.getVersion() + " [BETA]");
+        stage.setTitle("STFU - " + Version.getVersion() + " [BETA]");
         stage.setScene(scene);
         stage.setMaximized(true);
         stage.show();
