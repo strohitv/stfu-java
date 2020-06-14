@@ -84,4 +84,8 @@ public class MainController implements Initializable {
     public void runWithAdvancedOptions(ActionEvent actionEvent) throws IOException {
         showModal("scenes/advanced-start", "subwindow.advanced-start", false);
     }
+
+    public void showReleaseNotes(ActionEvent actionEvent) throws IOException {
+        showModal("scenes/releasenotes", "subwindow.releasenotes", false);
+    }
 }
