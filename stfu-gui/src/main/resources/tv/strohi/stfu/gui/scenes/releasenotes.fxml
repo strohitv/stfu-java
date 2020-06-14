@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.*?>
-
-<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.web.WebView?>
 <GridPane fx:id="mainPane" xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="tv.strohi.stfu.gui.scenes.ReleaseNotesController">
@@ -26,7 +24,7 @@
         <RowConstraints prefHeight="10" vgrow="NEVER" />
     </rowConstraints>
 
-    <TitledPane collapsible="false" text="title" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="4">
+    <TitledPane collapsible="false" text="title" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="4" maxHeight="Infinity" maxWidth="Infinity">
         <GridPane>
             <columnConstraints>
                 <ColumnConstraints prefWidth="10" hgrow="NEVER" />
@@ -39,7 +37,7 @@
                 <RowConstraints prefHeight="10" vgrow="NEVER" />
             </rowConstraints>
 
-            <TextFlow style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px" GridPane.columnIndex="1" GridPane.rowIndex="1" minWidth="800" minHeight="400" />
+            <WebView fx:id="releaseNotes" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1px" GridPane.columnIndex="1" GridPane.rowIndex="1" minWidth="800" minHeight="400" />
         </GridPane>
     </TitledPane>
 
