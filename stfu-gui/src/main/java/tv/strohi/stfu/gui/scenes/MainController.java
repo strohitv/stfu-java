@@ -80,4 +80,8 @@ public class MainController implements Initializable {
     public void browseProcesses(ActionEvent actionEvent) throws IOException {
         showModal("scenes/processes", "subwindow.processes", false);
     }
+
+    public void runWithAdvancedOptions(ActionEvent actionEvent) throws IOException {
+        showModal("scenes/advanced-start", "subwindow.advanced-start", false);
+    }
 }
