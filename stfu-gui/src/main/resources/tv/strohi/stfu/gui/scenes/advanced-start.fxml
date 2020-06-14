@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="mainPane" xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="tv.strohi.stfu.gui.scenes.AdvancedStartController">
+    <columnConstraints>
+        <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+        <ColumnConstraints hgrow="ALWAYS"/>
+        <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+        <RowConstraints vgrow="ALWAYS"/>
+        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+        <RowConstraints vgrow="NEVER"/>
+        <RowConstraints prefHeight="10" vgrow="NEVER"/>
+    </rowConstraints>
+
+    <TitledPane collapsible="false" text="paths.title" GridPane.columnIndex="1" GridPane.rowIndex="1" maxHeight="Infinity">
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+                <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                <RowConstraints vgrow="ALWAYS"/>
+                <RowConstraints prefHeight="10" vgrow="NEVER"/>
+            </rowConstraints>
+
+            <TableView GridPane.columnIndex="1" GridPane.rowIndex="1" maxHeight="Infinity" maxWidth="Infinity">
+                <columns>
+                    <TableColumn text="paths.columns.path" prefWidth="400" />
+                    <TableColumn text="paths.columns.ignore" prefWidth="200" />
+                    <TableColumn text="paths.columns.private"  prefWidth="200" />
+                    <TableColumn text="paths.columns.startdate" prefWidth="200" />
+                    <TableColumn text="paths.columns.startday" prefWidth="200" />
+                </columns>
+            </TableView>
+        </GridPane>
+    </TitledPane>
+
+    <TitledPane collapsible="false" text="settings.title" GridPane.columnIndex="1" GridPane.rowIndex="3" maxHeight="Infinity">
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                <ColumnConstraints hgrow="NEVER"/>
+                <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+                <ColumnConstraints prefWidth="10" hgrow="NEVER"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                <RowConstraints vgrow="NEVER"/>
+                <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                <RowConstraints vgrow="NEVER"/>
+                <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                <RowConstraints vgrow="NEVER"/>
+                <RowConstraints prefHeight="10" vgrow="NEVER"/>
+                <RowConstraints vgrow="NEVER"/>
+                <RowConstraints prefHeight="10" vgrow="ALWAYS"/>
+            </rowConstraints>
+
+            <CheckBox text="settings.ignore" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <CheckBox text="settings.private" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <CheckBox text="settings.startdate" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <DatePicker prefWidth="100" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+
+            <CheckBox text="settings.startday" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <ComboBox prefWidth="100" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+        </GridPane>
+    </TitledPane>
+</GridPane>

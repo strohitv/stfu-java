@@ -91,7 +91,7 @@
                         <SplitMenuButton text="tab.queue.autoupload.startnow" GridPane.columnIndex="3"
                                          GridPane.rowIndex="1">
                             <items>
-                                <MenuItem text="tab.queue.autoupload.startwithoptions"/>
+                                <MenuItem text="tab.queue.autoupload.startwithoptions" onAction="#runWithAdvancedOptions"/>
                             </items>
                         </SplitMenuButton>
                     </GridPane>
