@@ -74,6 +74,6 @@ public class MainController implements Initializable {
     }
 
     public void openTemplatesStage(ActionEvent actionEvent) throws IOException {
-        showModal("scenes/templates", "subwindow.templates", true);
+        showModal("scenes/templates/templates", "subwindow.templates", true);
     }
 }

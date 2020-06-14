@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<SplitPane fx:id="mainPane" dividerPositions="0.1" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tv.strohi.stfu.gui.scenes.TemplatesController">
+<SplitPane fx:id="mainPane" dividerPositions="0.1" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tv.strohi.stfu.gui.scenes.templates.TemplatesController">
     <GridPane prefWidth="350">
         <columnConstraints>
             <ColumnConstraints hgrow="NEVER" prefWidth="10" />
@@ -104,6 +104,7 @@
                     <ColumnConstraints hgrow="NEVER" prefWidth="10" />
                     <ColumnConstraints hgrow="ALWAYS" />
                     <ColumnConstraints hgrow="NEVER" prefWidth="10" />
+                    <ColumnConstraints hgrow="NEVER" prefWidth="40" />
                     <ColumnConstraints hgrow="NEVER" />
                     <ColumnConstraints hgrow="NEVER" prefWidth="10" />
                     <ColumnConstraints hgrow="NEVER" />
@@ -121,9 +122,9 @@
 
                 <Label text="template.edit.name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                <CheckBox prefWidth="300" maxWidth="Infinity" text="template.edit.showexpert" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                <CheckBox text="template.edit.showexpert" GridPane.columnIndex="5" GridPane.columnSpan="4" GridPane.rowIndex="1" />
 
-                <TabPane stylesheets="@css/tabpane.css" GridPane.columnIndex="1" GridPane.columnSpan="7" GridPane.rowIndex="3">
+                <TabPane stylesheets="@../css/tabpane.css" GridPane.columnIndex="1" GridPane.columnSpan="8" GridPane.rowIndex="3">
                     <Tab closable="false" text="template.edit.tab.general">
                         <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-width: 1px">
                             <columnConstraints>
@@ -448,7 +449,7 @@
                                                 <RowConstraints prefHeight="10" vgrow="NEVER" />
                                             </rowConstraints>
 
-                                            <Button prefHeight="50" prefWidth="50" text="templates.buttons.add" textFill="#009900" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <Button prefHeight="50" prefWidth="50" text="templates.buttons.add" textFill="#009900" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#addPlaceholderFilenames">
                                                 <font>
                                                     <Font name="System Bold" size="24.0" />
                                                 </font>
@@ -618,8 +619,8 @@
                     </Tab>
                 </TabPane>
 
-                <Button text="templates.buttons.save" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-                <Button text="templates.buttons.cancel" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                <Button text="templates.buttons.save" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                <Button text="templates.buttons.cancel" GridPane.columnIndex="8" GridPane.rowIndex="5" />
             </GridPane>
         </TitledPane>
     </GridPane>

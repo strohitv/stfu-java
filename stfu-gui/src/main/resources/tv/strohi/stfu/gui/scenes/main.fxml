@@ -155,7 +155,7 @@
 
                         <CheckBox text="tab.queue.queue.limit" GridPane.columnIndex="3" GridPane.columnSpan="3"
                                   GridPane.rowIndex="6"/>
-                        <Spinner max="10000" min="0" GridPane.columnIndex="7" GridPane.rowIndex="6"/>
+                        <Spinner max="10000" min="1" editable="true" GridPane.columnIndex="7" GridPane.rowIndex="6"/>
                         <ComboBox fx:id="speedComboBox" GridPane.columnIndex="9" GridPane.rowIndex="6"/>
 
                         <Label text="tab.queue.queue.afteruploadlabel" GridPane.columnIndex="3" GridPane.rowIndex="8"/>
