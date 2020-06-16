@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Releasenotes</title>
+</head>
+<body style="font-family: sans-serif; font-size: medium; width: 95vw; max-width: 95vw">
+<h2>Version 0.4.0 BETA (May 30, 2020)</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Adding videos to the queue manually is now possible. A plus button was added you can use
+            for that feature.</p>
+        <p>Videos inside a path set up for automatic uploads will be filled with their template when added. Videos
+            outside those paths will be filled with default values.</p>
+    </li>
+    <li><p><b>Feature</b>: A button for clearing the queue was added.</p>
+    </li>
+    <li><p><b>Feature</b>: A confirmation dialog is showed when closing the program while uploads are active.</p>
+    </li>
+    <li><p><b>Feature</b>: The action "after Uploading" also executes when the queue finishes and automatic uploading
+        wasn't active.</p>
+    </li>
+    <li><p><b>Bugfix</b>: Scaling issues with the queue were fixed</p>
+    </li>
+    <li><p><b>Bugfix</b>: The program does not crash anymore when changing the max upload speed.</p>
+    </li>
+    <li><p><b>Bugfix</b>: The next release date for Templates will not be set to January 1st 2000 sometimes anymore.</p>
+    </li>
+    <li><p><b>Other little bugfixes</b></p></li>
+    <li><p style="color: dimgray">Preparing the next release version might take some time. I'll rewrite the application
+        in Java to add multi platform support. If you have bugs or suggestions, feel free to submit them. I'll still
+        bring them inside the .NET version if possible.</p></li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.3.14 BETA (May 13, 2020)</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Bugfixes</p>
+    </li>
+    <li><p><b>Bugfix</b>: an error preventing uploads without thumbnails from finishing successful was fixed.</p>
+    </li>
+    <li><p><b>Bugfix</b>: remaining time will now be correct if a video file is greater than ~2GB.
+    </p>
+    </li>
+    <li><p><b>Bugfix</b>: progress is being shown in the taskbar again.</p>
+    </li>
+    <li><p style="color: dimgray">Next planned version is 0.4.0. This version will add support for manual uploads.
+        Tutorial videos will be updated for the new version.
+    </p></li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.3.13 BETA (May 2, 2020)</h2>
+<ul>
+    <li><p><b style="color: red">Special thanks to DarkHunterRPGx, Peacemaker Zockt, Rondral and Drexel for their
+        support on this version's developement!</b></p>
+    </li>
+    <li>
+        <p><b>Main feature</b>: Unfinished uploads will be stored on program close and can be continued on next startup.
+        </p>
+    </li>
+    <li><p><b>Feature</b>: Added an archive tab. All videos not to be uploaded are listed and can be managed there.
+        With this feature video names do not need to begin with an underscore to skip their upload.</p>
+    </li>
+    <li><p><b>Feature</b>: Videos are not being renamed to start with an underscore after upload anymore. Instead they
+        will be added to archive tab. Underscore filenames will still be ignored due to compatibility.</p>
+    </li>
+    <li><p><b>Feature</b>: Rewrote upload mechanism. It's now more stable.</p>
+    </li>
+    <li><p><b>Feature</b>: Upload speed can be limited. The added field limits all uploads to the speed configured
+        there. If you enter 1 MB, all uploads will be limited to 1 MB.</p>
+    </li>
+    <li><p><b>Feature</b>: Paths can now be set up to move successful uploads afterwards.</p>
+    </li>
+    <li><p><b>Feature</b>: Paths can now be set up to add videos based on a specific sort order. Possible sort orders:
+        Name, Creation date, Chanded date and file size, all ascending and descending.</p>
+    </li>
+    <li><p><b>Feature</b>: Marking all videos inside a path as uploaded will add them to archive tab instead of renaming
+        the files.</p>
+    </li>
+    <li><p><b>Feature</b>: Unclosed script tags inside a template will result in a warning on save.</p>
+    </li>
+    <li><p><b>Feature</b>: Numbers indicatig used count and maximal count are shown on title, description and tags when
+        editing a video.</p>
+    </li>
+    <li><p><b>Bugfix</b>: Unclosed script tags will not crash the uploader anymore.</p>
+    </li>
+    <li><p><b>Bugfix</b>: An error which let videos already being contained inside the queue be added again was fixed.
+    </p>
+    </li>
+    <li><p><b>Bugfix</b>: The filename of the video will be sent to youtube. This fix was copied from VidUp by Drexel.
+        Thank you very much!</p>
+    </li>
+    <li><p style="color: dimgray">Next planned version is 0.4.0. This version will add support for manual uploads.
+        Tutorial videos will be updated for the new version.</p>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.3.12 BETA (March 4, 2020)</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Bugfixes</p>
+    </li>
+    <li><p><b>Feature</b>: The old outdated video tutorial was being replaced by a tutorial playlist which will be
+        updated when needed.</p>
+    </li>
+    <li><p><b>Bugfix</b>: Adding a new line inside tags and description inside templates was not possible. This was
+        fixed.</p>
+    </li>
+    <li><p><b>Bugfix</b>: Videos can only be uploaded if there file extension matches one of the following: .AVI, .MKV,
+        .MOV, .MP4 and some others. This prevents uploads of non-videos which would be rejected by Youtube.</p>
+    </li>
+    <li><p><b>Bugfix</b>: Threading problems when searching directories were fixed.</p>
+    </li>
+    <li><p><b>Bugfix</b>: Sending mails does not crash the program anymore if no tags were set.</p>
+    </li>
+    <li><p style="color: dimgray">Next planned version is 0.3.13. It will add a stored queue that does not get deleted
+        on program exit.<br/>
+        The planned version after that one is 0.4.0. It will add support for manual uploads.
+        Tutorial videos will be updated for the new version.
+    </p></li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.3.11 BETA (February 1, 2020)</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Smaller preparation changes for the next greater updates</p>
+    </li>
+    <li><p><b>Feature</b>: Starting the automatic uploader and the uploading mechanism itself are now separated.
+    </p>
+    </li>
+    <li><p><b>Feature</b>: Next planned upload suggestion is now listed in the templates window.</p>
+    </li>
+    <li><p><b>Feature</b>: The extra window showing when starting the automatic uploader is now optional and works as
+        advanced start.</p>
+    </li>
+    <li><p><b>Bugfix</b>: The action "after uploading" was triggered directly after the first upload. This was fixed.
+    </p>
+    </li>
+    <li><p><b>Bugfix</b>: a problem with the scripting function findNumber was fixed.</p>
+    </li>
+    <li><p><b>Bugfix</b>: Uploader will not crash if a video file does not exist anymore.
+    </p>
+    </li>
+    <li><p><b>Bugfix</b>: Mails weren't be send for the last upload if the action after uploading was set. This was
+        fixed.</p>
+    </li>
+    <li><p style="color: dimgray">Next planned version is 0.3.12. It will add a stored queue that does not get deleted
+        on program exit.<br/>
+        The planned version after that one is 0.4.0. It will add support for manual uploads.
+        Tutorial videos will be updated for the new version.</p></li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.3.10 BETA (December 16, 2019)</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Upload speed</p>
+    </li>
+    <li><p><b>Feature</b>: Upload speed is shown when uploading.</p>
+    </li>
+    <li><p><b>Bugfix</b>: Videos could not be added while uploading. This was fixed.</p>
+    </li>
+    <li><p><b>Bugfix</b>: Desktop notifications will now be shown corretly.</p>
+    </li>
+    <li><p><b>Bugfix</b>: Emojis should now be displayed correctly.</p>
+    </li>
+    <li><p style="color: dimgray">Next planned version is 0.4.0. It will add support for manual uploads.
+        Tutorial videos will be updated for the new version.</p></li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.3.9 BETA (October 4, 2019)</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Added notifications</p>
+    </li>
+    <li><p><b>Feature</b>: Uploader can send notifications</p>
+        <ul>
+            <li><p>Connected accounts need to be reconected to send mail notifications. When enabling this feature
+                uploader can only send mails, not read your inbox.</p>
+            </li>
+            <li><p>Sending mails can be configured inside templates window. Mails will be sent to the given address from
+                the channels mail address.</p>
+            </li>
+            <li><p>Desktop notifications are also enabled.</p>
+            </li>
+        </ul>
+    </li>
+    <li><p><b>Bugfix</b>: Uploads won't crash anymore when a thumbnail is not found to upload</p>
+    </li>
+    <li><p>Google displays this application as <b>unverified App</b> when connecting... :(</p>
+        <p>All apps connecting Google services needs to be reviewed. The warning will appear as long as they don't
+            review my application. I'll enter it for review as soon as the first full version is released.</p>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.3.8 BETA (May 26, 2019)</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Moving the separate upload window into the main window</p>
+    </li>
+    <li><p><b>Feature</b>: Uploads are being displayed inside the main window instead of a separate window.
+        This is preparation work for version 0.4.0 which will introduce support for manual uploads.</p>
+    </li>
+    <li><p><b>Feature</b>: If an error occurs while uploading (e. g. connection lost temporarily) the upload will be
+        paused for 1 minute 30 seconds before retrying. This will be repeated 10 times before the upload will fail.</p>
+    </li>
+    <li><p><b>Bugfix</b>: The not working action after uploading was fixed.</p>
+    </li>
+    <li><p style="color: dimgray">Next planned version is 0.4.0. It will add support for manual uploads.
+        Tutorial videos will be updated for the new version.</p></li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.3.7 BETA (May 4, 2019)</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Added expert mode</p>
+    </li>
+    <li><p><b>Feature</b>: Rewrote C# interface as "expert mode" and hid it as default to not confuse non advanced
+        users.</p>
+    </li>
+    <li><p><b>Feature</b>: Two added tabs explain the functionality to the user.</p>
+    </li>
+    <li><p><b>Feature</b>: The old features from 0.1.0 Beta are now back but have to be used in C# syntax.</p>
+    </li>
+    <li><p><b>Feature</b>: Additional C# libraries can be referenced (e. g. System.Windows.Forms to display a message
+        box after an successful upload).</p>
+    </li>
+    <li><p><b>Feature</b>: The upload cleanup script will be executed after an upload finished.</p>
+    </li>
+    <li><p style="color: dimgray">Next planned version is 0.4.0. It will add support for manual uploads.
+        Tutorial videos will be updated for the new version.</p></li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.3.6 BETA (March 31, 2019)</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Small changes</p>
+    </li>
+    &uuml;ber Infos
+    <li><p><b>Feature</b>: Action after upload was rewritten to make it more stable. Please contact me if you spot
+        errors.</p>
+    </li>
+    <li><p><b>Feature</b>: Updater was updated to be a bit more stable.
+    </p>
+    </li>
+    <li><p><b>Bugfix</b>: The button to chose a thumbnail inside the template window does work now - I simply forgot to
+        add its functionality. :D</p>
+    </li>
+    <li><p style="color: dimgray">Road to 0.4.0:</p>
+        <ul>
+            <li><p style="color: dimgray">Version 0.3.7 will introduce changes to the C# interface.</p>
+            </li>
+            <li><p style="color: dimgray">Version 0.4.0 will contain a surprise.</p></li>
+        </ul>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.3.5 BETA (March 24, 2019)</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Queue changes</p>
+    </li>
+    <li><p><b>Feature</b>: Video details can now be edited while uploading. Use the action button for it.</p>
+    </li>
+    <li><p><b>Feature</b>: Rewrote the upload mechanism. It's now more stable.</p>
+    </li>
+    <li><p><b>Feature</b>: Finished uploads remain inside the list and can be removed from it using the action button.
+    </p>
+    </li>
+    <li><p><b>Bugfix</b>: The order of the videos inside the queue can be changed using the action button.</p>
+    </li>
+    <li><p><b>Bugfix</b>: The thumbnail of an upload is displayed inside the queue.</p>
+    </li>
+    <li><p><b>Bugfix</b>: Added error logs inside the errors dir.</p>
+    </li>
+    <li><p style="color: dimgray">Road to 0.4.0:</p>
+        <ul>
+            <li><p style="color: dimgray">Version 0.3.6 will introduce a more stable action after uploading.</p>
+            </li>
+            <li><p style="color: dimgray">Version 0.3.7 will introduce changes to the C# interface.</p>
+            </li>
+            <li><p style="color: dimgray">Version 0.4.0 will contain a surprise.</p></li>
+        </ul>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.3.4 BETA (February 23, 2019)</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Added a queue inside the upload window.</p>
+    </li>
+    <li><p><b>Feature</b>: Many things were changed as a preparation for version 0.4.0. One visible change is the queue.
+        It now displays all uploads with nice colors.</p>
+    </li>
+    <li><p><b>Feature</b>: The data model was restructured for the changes. It should be more stable now. The action
+        after uploading could be broken though.</p>
+    </li>
+    <li><p><b>Feature</b>: You can use the following actions to manage videos inside the queue:</p>
+        <ul>
+            <li><p>Upload starts can be forced. It's possible to upload several videos at a time.</p></li>
+            <li><p>Uploads can be paused and resumed.</p></li>
+            <li><p>Uploads can be skipped temporarily.</p></li>
+            <li><p>Single uploads can be canceled.</p></li>
+        </ul>
+    </li>
+    <li><p><b>Feature</b>: Errors are displayed more clear.</p>
+    </li>
+    <li><p style="color: dimgray">This section will tell you about my plans for future updates. Its text color is gray
+        to differ it from the feature and bugfix lists.</p>
+        <p style="color: dimgray">Road to 0.4.0:</p>
+        <ul>
+            <li><p style="color: dimgray">Version 0.3.5 will introduce the possibility to edit videos while uploading.</p>
+            </li>
+            <li><p style="color: dimgray">Version 0.3.6 will introduce a more stable action after uploading.</p>
+            </li>
+            <li><p style="color: dimgray">Version 0.3.7 will introduce changes to the C# interface.</p>
+            </li>
+            <li><p style="color: dimgray">The video tutorial will be changed to a video playlist which can be refreshed easier. This will be introduced when possible.</p>
+            </li>
+            <li><p style="color: dimgray">Version 0.4.0 will contain a surprise.</p></li>
+        </ul>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.3.3 BETA (January 23, 2019)</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Taskbar shows upload progress</p>
+    </li>
+    <li><p><b>Feature</b>: Tasbar shows progress of uploads. With this you do not need to bring the window into the foreground to see how the upload is doing.
+    </p>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.3.2 BETA (January 20, 2019)</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Duration and remaining duration of uploads is shown</p>
+    </li>
+    <li><p><b>Feature</b>: While uploading a video the uploader will display how long the upload lasted until now and how much time is remaining until the upload will be finished.</p>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.3.1 BETA (December 9, 2018)</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: The release date for future uploads is saved</p>
+    </li>
+    <li><p><b>Feature</b>: The uploader will store the next release date for planned templates even after a program close.</p>
+    </li>
+    <li><p><b>Bugfix</b>: Remaining uplaods will not crash from 2 hours after start of the uploader on.</p>
+    </li>
+    <li><p><b>Bugfix</b>: Error in texts were fixed.</p>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+<p>Updates will be more frequent in the future. I finished studying and just needed some time to get used to my work times.<br/>
+    Yours sincerly!</p>
+
+
+<h2>Version 0.3.0 BETA</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Added placeholders</p>
+    </li>
+    <li>
+        <p><b>Feature</b>: To use an easy placeholder mechanism, users can enter <code>&lt;CUSTOM PLACEHOLDERNAME&gt;</code> to define placeholders inside title, description, tags and thumbnail. The name can be defined to the users liking.
+            E. g. <code>&lt;Videotitle&gt;</code> or <code>&lt;tags&gt;</code>.
+        </p>
+        <p>This is a picture showing a custom placeholder:</p>
+        <p><img src="https://abload.de/img/v0.3.0-tut-1e6dlj.png"
+                alt="Beispielbild f&uuml;r Definierung von Platzhaltern"
+                width="90%" height="auto" style="width: 90%; max-width: 90%; height: auto"/>
+        </p>
+    </li>
+    <li>
+        <p><b>Feature</b>: After defining some placeholders the user can use the tab "placeholders" to enter filenames and the placeholders replacement for the specified placeholder.</p>
+        <p>This is a picture showing the placeholder replacements:</p>
+        <p><img src="https://abload.de/img/v0.3.0-tut-2bci55.png"
+                alt="Beispielbild f&uuml;r die Einstellung von Platzhaltern" width="90%" height="auto"
+                style="width: 90%; max-width: 90%; height: auto"/></p>
+    </li>
+    <li><p><b>Feature</b>: Placeholders will be replaced before an upload automatically if there is a replacement defined for a video file with the given name.</p>
+    </li>
+    <li><p><b>Feature</b>: LUA support was removed. You can use <code>&lt;NAME&gt;</code> for placeholders and <code>&lt;&lt;&lt; CODE &gt;&gt;&gt;</code> to run C# scripts. It is easier this way.</p>
+    </li>
+    <li><p><b>Feature</b>: A dialog is now asking of changes should be saved if the user leaves a template with unsaved changes.
+    </p>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.2.2 BETA</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Bugfix</p>
+    </li>
+    <li><p><b>Bugfix</b>: The program will not crash anymore if windows 7 blocks the stfu-updater.exe without a reason (YES I DO PUBLISH A SEPARATE VERSION JUST FOR THIS AND PS: I HATE YOU, WINDOWS 7 EXPLORER).</p>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.2.1 BETA</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Added a release notes window</p>
+    </li>
+    <li><p><b>Feature</b>: A window showing the release notes for each version was added (you're reading some text from it right now. ^^ )</p>
+    </li>
+    <li><p><b>Feature</b>: The release notes window will be shown at the first start after each update. For all other program starts it can be disabled using the checkbox inside the window.</p>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.2.0 BETA</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Added update feature</p>
+    </li>
+    <li><p><b>Feature</b>: The application can update itself on each program start.</p>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.1.2 BETA</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Added C# scripting support</p>
+    </li>
+    <li><p><b>Feature</b>: Users can run C# scripts inside title, description, tags and thumbnail path. Scripts start with <code>&lt;&lt;&lt;</code> and end with <code>&gt;&gt;&gt;</code></p>
+    </li>
+    <li><p><b>Feature</b>: Upload preparation and clenup scripts are added as a separate tab inside templates window (e. g. to create a variable or custom function)</p>
+    </li>
+    <li><p><b>Feature</b>: Errors will be logged inside an error dir.</p>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.1.1 BETA</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: Small changes</p>
+    </li>
+    <li><p><b>Feature</b>: A tutorial was added to explain the use of the program (<a
+            href="https://www.youtube.com/watch?v=XjYvy36BrNo">https://www.youtube.com/watch?v=XjYvy36BrNo</a>)</p>
+    </li>
+    <li><p><b>Feature</b>: You can now mark videos as uploaded inside the paths window</p>
+    </li>
+    <li><p><b>Several Bugfixes</b></p>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
+
+
+<h2>Version 0.1.0 BETA</h2>
+<ul>
+    <li>
+        <p><b>Main feature</b>: First version. :-)</p>
+    </li>
+    <li><p><b>Feature</b>: Users can create templates</p>
+    </li>
+    <li><p><b>Feature</b>: Users can register paths for observation and let them monitor by the uploader</p>
+    </li>
+    <li><p><b>Feature</b>: Users can connect one youtube account</p>
+    </li>
+    <li><p><b>Feature</b>: videos can be uploaded automatically</p>
+    </li>
+</ul>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
