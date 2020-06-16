@@ -5,7 +5,7 @@
     <title>Releasenotes</title>
 </head>
 <body style="font-family: sans-serif; font-size: medium; width: 95vw; max-width: 95vw">
-<h2>Version 0.4.0 BETA (30.05.2020)</h2>
+<h2>Version 0.4.0 BETA (May 30, 2020)</h2>
 <ul>
     <li>
         <p><b>Main feature</b>: Adding videos to the queue manually is now possible. A plus button was added you can use
@@ -31,204 +31,136 @@
         in Java to add multi platform support. If you have bugs or suggestions, feel free to submit them. I'll still
         bring them inside the .NET version if possible.</p></li>
 </ul>
-<p><span style="color: red">If you find Erros</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
-<h2>Version 0.3.14 BETA (13.05.2020)</h2>
+<h2>Version 0.3.14 BETA (May 13, 2020)</h2>
 <ul>
     <li>
         <p><b>Main feature</b>: Bugfixes</p>
     </li>
-    <li><p><b>Bugfix</b>: das Problem, durch das Uploads ohne Thumbnails nicht abgeschlossen wurden, sondern 15 mal in
-        Folge mit je 1:30 Minuten Wartezeit neu versucht wurden und dann scheiterten, wurde behoben.</p>
+    <li><p><b>Bugfix</b>: an error preventing uploads without thumbnails from finishing successful was fixed.</p>
     </li>
-    <li><p><b>Bugfix</b>: die verbleibende Zeit wird nun auch bei gro&szlig;en Dateien (> 2 GB) korrekt gesch&auml;tzt.
+    <li><p><b>Bugfix</b>: remaining time will now be correct if a video file is greater than ~2GB.
     </p>
     </li>
-    <li><p><b>Bugfix</b>: der Fortschritt wird nun beim Icon in der Taskleiste wieder korrekt angezeigt.</p>
+    <li><p><b>Bugfix</b>: progress is being shown in the taskbar again.</p>
     </li>
-    <li><p style="color: dimgray">Als n&auml;chstes steht (geplant) Version 0.4.0 an. In dieser Version wird es endlich
-        m&ouml;glich sein, den Uploader als ganz normalen Uploader zu verwenden. Man kann dann Videos manuell hinzuf&uuml;gen!
-        Die
-        Planungen daf&uuml;r laufen bereits. F&uuml;r diese Version werden auch die Tutorial-Videos erneut angepasst
-        werden.
+    <li><p style="color: dimgray">Next planned version is 0.4.0. This version will add support for manual uploads.
+        Tutorial videos will be updated for the new version.
     </p></li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
-<h2>Version 0.3.13 BETA (02.05.2020)</h2>
+<h2>Version 0.3.13 BETA (May 2, 2020)</h2>
 <ul>
-    <li><p><b style="color: red">Ein besonderes Dankesch&ouml;n an DarkHunterRPGx, Peacemaker Zockt, Rondral und Drexel
-        f&uuml;r
-        die Mithilfe bei der Entwicklung dieser Version!</b></p>
+    <li><p><b style="color: red">Special thanks to DarkHunterRPGx, Peacemaker Zockt, Rondral and Drexel for their
+        support on this version's developement!</b></p>
     </li>
     <li>
-        <p><b>Main feature</b>: Nicht abgeschlossene Uploads werden ab sofort &uuml;ber das Programmende
-            hinaus gespeichert und k&ouml;nnen beim erneuten Programmstart fortgesetzt werden.</p>
+        <p><b>Main feature</b>: Unfinished uploads will be stored on program close and can be continued on next startup.
+        </p>
     </li>
-    <li><p><b>Feature</b>: Es gibt nun einen Archiv-Tab im Hauptfenster. In diesem finden sich die Uploads, die in
-        vorigen Sitzungen hochgeladen wurden. Videos in dieser Liste k&ouml;nnen manuell verwaltet werden und werden
-        nicht
-        erneut hochgeladen, auch wenn der Dateiname nicht mit einem Unterstrich beginnt.</p>
+    <li><p><b>Feature</b>: Added an archive tab. All videos not to be uploaded are listed and can be managed there.
+        With this feature video names do not need to begin with an underscore to skip their upload.</p>
     </li>
-    <li><p><b>Feature</b>: Der Uploader benennt nun keine Dateien mehr nach dem Upload um, damit sie mit einem
-        Unterstrich starten. Stattdessen verschieb er sie ins Archiv. Aktuell werden Dateien mit Unterstrich weiterhin
-        nicht hochgeladen, um zu den alten Versionen kompatibel zu bleiben.</p>
+    <li><p><b>Feature</b>: Videos are not being renamed to start with an underscore after upload anymore. Instead they
+        will be added to archive tab. Underscore filenames will still be ignored due to compatibility.</p>
     </li>
-    <li><p><b>Feature</b>: Der komplette Uploadmechanismus wurde neu geschrieben und ist jetzt deutlich stabiler. Das
-        betrifft auch die Berechnung der aktuellen Geschwindigkeit und der noch verbleibenden Restzeit.</p>
+    <li><p><b>Feature</b>: Rewrote upload mechanism. It's now more stable.</p>
     </li>
-    <li><p><b>Feature</b>: Es ist nun m&ouml;glich, die Geschwindigkeit der Uploads zu limitieren. Jeder Upload, der l&auml;uft,
-        erh&auml;lt die eingestellte Geschwindigkeit als Maximum. Wenn man also 1 MByte/s als Maximum einstellt und drei
-        Uploads gleichzeitig laufen l&auml;sst, l&auml;dt der Uploader mit 3 MByte/s hoch, weil jeder Upload auf 1
-        MByte/s
-        limitiert wird.</p>
+    <li><p><b>Feature</b>: Upload speed can be limited. The added field limits all uploads to the speed configured
+        there. If you enter 1 MB, all uploads will be limited to 1 MB.</p>
     </li>
-    <li><p><b>Feature</b>: In der Pfadverwaltung kann nun f&uuml;r Pfade einzeln eingestellt werden, dass Videos nach
-        einem
-        erfolgreichen Upload in einen anderen Ordner verschoben werden sollen.</p>
+    <li><p><b>Feature</b>: Paths can now be set up to move successful uploads afterwards.</p>
     </li>
-    <li><p><b>Feature</b>: In der Pfadverwaltung kann nun f&uuml;r Pfade einzeln eingestellt werden, in welcher
-        Reihenfolge
-        vorhandene Videos beim Start des Autouploaders hinzugef&uuml;gt werden sollen. M&ouml;glich sind Sortierungen
-        nach Namen,
-        Erstelldatum, &Auml;nderungsdatum und Dateigr&ouml;&szlig;e, alle jeweils auf- und absteigend.</p>
+    <li><p><b>Feature</b>: Paths can now be set up to add videos based on a specific sort order. Possible sort orders:
+        Name, Creation date, Chanded date and file size, all ascending and descending.</p>
     </li>
-    <li><p><b>Feature</b>: Wenn man in der Pfadverwaltung nun alle Videos als hochgeladen markiert, dann werden diese
-        ins Archiv gesetzt und nicht wie vorher mit einem Unterstrich als nicht hochzuladen markiert.</p>
+    <li><p><b>Feature</b>: Marking all videos inside a path as uploaded will add them to archive tab instead of renaming
+        the files.</p>
     </li>
-    <li><p><b>Feature</b>: Wenn ein Template gespeichert werden soll, bei dem Script-Tags nicht richtig geschlossen
-        sind, wird ein Warnhinweis angezeigt.</p>
+    <li><p><b>Feature</b>: Unclosed script tags inside a template will result in a warning on save.</p>
     </li>
-    <li><p><b>Feature</b>: Beim Bearbeiten von bereits in die Warteschlange eingef&uuml;gten Uploads wird bei Titel,
-        Beschreibung und Tags nun angezeigt, wie viele Zeichen schon genutzt wurden und wie viele insgesamt zur
-        Verf&uuml;gung stehen.</p>
+    <li><p><b>Feature</b>: Numbers indicatig used count and maximal count are shown on title, description and tags when
+        editing a video.</p>
     </li>
-    <li><p><b>Bugfix</b>: Bei nicht geschlossenen Scripten st&uuml;rzt der Uploader nun nicht mehr ab.</p>
+    <li><p><b>Bugfix</b>: Unclosed script tags will not crash the uploader anymore.</p>
     </li>
-    <li><p><b>Bugfix</b>: Ein Fehler, durch den Videos, die bereits in der Warteschlange sind, erneut hinzugef&uuml;gt
-        wurden, wurde behoben.</p>
+    <li><p><b>Bugfix</b>: An error which let videos already being contained inside the queue be added again was fixed.
+    </p>
     </li>
-    <li><p><b>Bugfix</b>: Der Dateiname der Videodatei wird nun an Youtube &uuml;bertragen. Bisher listet das Youtube
-        Studio
-        den Dateinamen als "unknown". Diesen Fix habe ich aus dem Quellcode von Drexels VidUp kopiert. Vielen Dank
-        daf&uuml;r!</p>
+    <li><p><b>Bugfix</b>: The filename of the video will be sent to youtube. This fix was copied from VidUp by Drexel.
+        Thank you very much!</p>
     </li>
-    <li><p style="color: dimgray">Als n&auml;chstes steht (geplant) Version 0.4.0 an. In dieser Version wird es endlich
-        m&ouml;glich sein, den Uploader als ganz normalen Uploader zu verwenden. Man kann dann Videos manuell hinzuf&uuml;gen!
-        Die
-        Planungen daf&uuml;r laufen bereits. F&uuml;r diese Version werden auch die Tutorial-Videos erneut angepasst
-        werden.</p>
+    <li><p style="color: dimgray">Next planned version is 0.4.0. This version will add support for manual uploads.
+        Tutorial videos will be updated for the new version.</p>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
-<h2>Version 0.3.12 BETA (04.03.2020)</h2>
+<h2>Version 0.3.12 BETA (March 4, 2020)</h2>
 <ul>
     <li>
         <p><b>Main feature</b>: Bugfixes</p>
     </li>
-    <li><p><b>Feature</b>: Anstatt des hoffnungslos veralteten Youtube-Tutorials wurde nun eine Tutorial-Playlist im
-        Men&uuml; "Hilfe/Support" verlinkt. Dieses wird von mir mit Videos zur aktuellen Version gepflegt und jeweils an
-        die
-        neuste Version angepasst.</p>
+    <li><p><b>Feature</b>: The old outdated video tutorial was being replaced by a tutorial playlist which will be
+        updated when needed.</p>
     </li>
-    <li><p><b>Bugfix</b>: Bisher war es nicht m&ouml;glich, bei den Templates in den Beschreibungen eine neue Zeile
-        einzuf&uuml;gen, weil stattdessen die &Auml;nderungen gespeichert wurden. Das wurde nun behoben.</p>
+    <li><p><b>Bugfix</b>: Adding a new line inside tags and description inside templates was not possible. This was
+        fixed.</p>
     </li>
-    <li><p><b>Bugfix</b>: Die m&ouml;glichen Endungen der Videodateien, die der Uploader an Youtube senden kann, wurden
-        auf
-        die g&auml;ngigsten Containerformate f&uuml;r Videos (z. B. .AVI, .MKV, .MOV, .MP4 und noch ein paar mehr)
-        beschr&auml;nkt, um
-        zu verhindern, dass man mit dem Tool z. B. Powerpoint-Projekte, Textdateien o. &auml;. hochladen kann, die von
-        Youtube eh abgelehnt werden w&uuml;rden.</p>
+    <li><p><b>Bugfix</b>: Videos can only be uploaded if there file extension matches one of the following: .AVI, .MKV,
+        .MOV, .MP4 and some others. This prevents uploads of non-videos which would be rejected by Youtube.</p>
     </li>
-    <li><p><b>Bugfix</b>: Verschiedene Probleme, die durch das gleichzeitige Durchsuchen mehrerer Pfade auftraten und
-        zum Programmabsturz f&uuml;hrten, wurden behoben.</p>
+    <li><p><b>Bugfix</b>: Threading problems when searching directories were fixed.</p>
     </li>
-    <li><p><b>Bugfix</b>: Der Mailversand f&uuml;hrt nun nicht mehr zu einem Programmabsturz, wenn man keine Tags f&uuml;r
-        das
-        Video angegeben hat.</p>
+    <li><p><b>Bugfix</b>: Sending mails does not crash the program anymore if no tags were set.</p>
     </li>
-    <li><p style="color: dimgray">Als n&auml;chstes steht (geplant) Version 0.3.13 an. In dieser soll der Uploader die
-        Warteschlange beim Programmende nicht mehr vergessen und f&uuml;r hochgeladene Videos ein Archiv f&uuml;hren,
-        sodass
-        hochgeladene Videos nicht mehr mit einem Unterstrich markiert werden m&uuml;ssen.<br/>
-        Danach kommt (geplant) Version 0.4.0. In dieser Version wird es endlich m&ouml;glich sein, den Uploader als ganz
-        normalen Uploader zu verwenden. Man kann dann Videos endlich manuell hinzuf&uuml;gen!
+    <li><p style="color: dimgray">Next planned version is 0.3.13. It will add a stored queue that does not get deleted
+        on program exit.<br/>
+        The planned version after that one is 0.4.0. It will add support for manual uploads.
+        Tutorial videos will be updated for the new version.
     </p></li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
-<h2>Version 0.3.11 BETA (01.02.2020)</h2>
+<h2>Version 0.3.11 BETA (February 1, 2020)</h2>
 <ul>
     <li>
-        <p><b>Main feature</b>: Kleine Verbesserungen auf dem Weg zum manuellen Hinzuf&uuml;gen</p>
+        <p><b>Main feature</b>: Smaller preparation changes for the next greater updates</p>
     </li>
-    <li><p><b>Feature</b>: Man kann das Hochladen der Warteschlange und das Hinzuf&uuml;gen der Videos in die
-        Warteschlange
-        getrennt starten und beenden. Daf&uuml;r wurde &uuml;ber der Warteschlange ein kleiner Abschnitt hinzugef&uuml;gt.
+    <li><p><b>Feature</b>: Starting the automatic uploader and the uploading mechanism itself are now separated.
     </p>
     </li>
-    <li><p><b>Feature</b>: Beim Template-Bearbeiten wird im Tab f&uuml;r die Ver&ouml;ffentlichungsplanung unten nun
-        auch das
-        Datum des n&auml;chsten geplanten Uploads angezeigt und kann angepasst werden.</p>
+    <li><p><b>Feature</b>: Next planned upload suggestion is now listed in the templates window.</p>
     </li>
-    <li><p><b>Feature</b>: Da man nun jederzeit das geplante Datum ver&auml;ndern kann, wird das Fenster, das bisher
-        beim
-        Start der &Uuml;berwachung angezeigt wurde, optional. Wenn man die &Uuml;berwachung nun per Klick auf den Button
-        startet,
-        kommt es nicht. Wenn man es anzeigen m&ouml;chte, kann man rechts am Button auf einen kleinen Pfeil klicken und
-        es
-        dort aus einem Untermen&uuml; ausw&auml;hlen.</p>
+    <li><p><b>Feature</b>: The extra window showing when starting the automatic uploader is now optional and works as
+        advanced start.</p>
     </li>
-    <li><p><b>Bugfix</b>: Ab sofort wird die Aktion "am Ende" (Programm schlie&szlig;en, Herunterfahren) nicht mehr
-        ausgef&uuml;hrt, wenn das erste Video aus der Warteschlange fertig hochgeladen wurde, sondern erst, wenn die
-        gesamte
-        Warteschlange beendet wurde.</p>
-    </li>
-    <li><p><b>Bugfix</b>: Wenn man die Funktion findNumber zum automatisierten Finden von Zahlen genutzt hat, wurden
-        Zahlen am Ende des Dateinamens nicht gefunden. Das ist jetzt behoben.</p>
-    </li>
-    <li><p><b>Bugfix</b>: Wenn ein Pfad beim Start der &Uuml;berwachung nicht mehr existiert (z. B. umbenannt oder gel&ouml;scht
-        wurde), dann st&uuml;rzt das Programm nicht mehr ab, benachrichtigt aber auch nicht &uuml;ber dieses Problem.
+    <li><p><b>Bugfix</b>: The action "after uploading" was triggered directly after the first upload. This was fixed.
     </p>
     </li>
-    <li><p><b>Bugfix</b>: Wenn man eine Mail f&uuml;r erfolgreiche oder fehlerhafte erhalten wollte und der Uploader
-        sich am
-        Ende geschlossen hat oder Windows heruntergefahren hat, wurde f&uuml;r das letzte hochgeladene Video keine Mail
-        mehr
-        versendet. Das wurde korrigiert.</p>
+    <li><p><b>Bugfix</b>: a problem with the scripting function findNumber was fixed.</p>
     </li>
-    <li><p style="color: dimgray">Als n&auml;chstes steht (geplant) Version 0.3.12 an. In dieser soll der Uploader die
-        Warteschlange beim Programmende nicht mehr vergessen und f&uuml;r hochgeladene Videos ein Archiv f&uuml;hren,
-        sodass
-        hochgeladene Videos nicht mehr mit einem Unterstrich markiert werden m&uuml;ssen.<br/>
-        Danach kommt (geplant) Version 0.4.0. In dieser Version wird es endlich m&ouml;glich sein, den Uploader als ganz
-        normalen Uploader zu verwenden. Man kann dann Videos endlich manuell hinzuf&uuml;gen!</p></li>
+    <li><p><b>Bugfix</b>: Uploader will not crash if a video file does not exist anymore.
+    </p>
+    </li>
+    <li><p><b>Bugfix</b>: Mails weren't be send for the last upload if the action after uploading was set. This was
+        fixed.</p>
+    </li>
+    <li><p style="color: dimgray">Next planned version is 0.3.12. It will add a stored queue that does not get deleted
+        on program exit.<br/>
+        The planned version after that one is 0.4.0. It will add support for manual uploads.
+        Tutorial videos will be updated for the new version.</p></li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
-<h2>Version 0.3.10 BETA (16.12.2019)</h2>
+<h2>Version 0.3.10 BETA (December 16, 2019)</h2>
 <ul>
     <li>
         <p><b>Main feature</b>: Bugfixes</p>
@@ -247,13 +179,10 @@
         m&ouml;glich sein, den Uploader als ganz normalen Uploader zu verwenden. Man kann dann Videos endlich manuell
         hinzuf&uuml;gen!</p></li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
-<h2>Version 0.3.9 BETA (04.10.2019)</h2>
+<h2>Version 0.3.9 BETA (October 4, 2019)</h2>
 <ul>
     <li>
         <p><b>Main feature</b>: Der Mailversand wurde hinzugef&uuml;gt</p>
@@ -294,13 +223,10 @@
     </li>
     <li><p style="color: dimgray"></p></li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
-<h2>Version 0.3.8 BETA (26.05.2019)</h2>
+<h2>Version 0.3.8 BETA (May 26, 2019)</h2>
 <ul>
     <li>
         <p><b>Main feature</b>: Entfernung des separaten Upload-Fensters</p>
@@ -320,13 +246,10 @@
         m&ouml;glich sein, den Uploader als ganz normalen Uploader zu verwenden. Man kann dann Videos endlich manuell
         hinzuf&uuml;gen!</p></li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
-<h2>Version 0.3.7 BETA (04.05.2019)</h2>
+<h2>Version 0.3.7 BETA (May 4, 2019)</h2>
 <ul>
     <li>
         <p><b>Main feature</b>: Erweiterung der Skriptfunktionen zum Expertenmodus</p>
@@ -354,13 +277,10 @@
         den Uploader als ganz normalen Uploader zu verwenden. Man kann dann Videos endlich manuell hinzuf&uuml;gen!</p>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
-<h2>Version 0.3.6 BETA (31.03.2019)</h2>
+<h2>Version 0.3.6 BETA (March 31, 2019)</h2>
 <ul>
     <li>
         <p><b>Main feature</b>: Kleine &Auml;nderungen</p>
@@ -387,13 +307,10 @@
         </ul>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
-<h2>Version 0.3.5 BETA (24.03.2019)</h2>
+<h2>Version 0.3.5 BETA (March 24, 2019)</h2>
 <ul>
     <li>
         <p><b>Main feature</b>: &Auml;nderungen an der Warteschlange</p>
@@ -431,13 +348,10 @@
         </ul>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
-<h2>Version 0.3.4 BETA (23.02.2019)</h2>
+<h2>Version 0.3.4 BETA (February 23, 2019)</h2>
 <ul>
     <li>
         <p><b>Main feature</b>: Anzeige einer Liste im Hochladefenster</p>
@@ -504,13 +418,10 @@
         </ul>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
-<h2>Version 0.3.3 BETA (23.01.2019)</h2>
+<h2>Version 0.3.3 BETA (January 23, 2019)</h2>
 <ul>
     <li>
         <p><b>Main feature</b>: Taskleistensymbol zeigt Fortschritt an</p>
@@ -520,13 +431,10 @@
     </p>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
-<h2>Version 0.3.2 BETA (20.01.2019)</h2>
+<h2>Version 0.3.2 BETA (January 20, 2019)</h2>
 <ul>
     <li>
         <p><b>Main feature</b>: Laufzeit des Uploads wird angezeigt</p>
@@ -536,13 +444,10 @@
         gesch&auml;tzt noch laufen wird.</p>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
-<h2>Version 0.3.1 BETA (09.12.2018)</h2>
+<h2>Version 0.3.1 BETA (December 9, 2018)</h2>
 <ul>
     <li>
         <p><b>Main feature</b>: Das Ver&ouml;ffentlichungsdatum wird gespeichert</p>
@@ -558,10 +463,7 @@
     <li><p><b>Bugfix</b>: Fehler in Texten wurden behoben.</p>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 <p>In Zukunft wird es wieder h&auml;ufiger eine neue Version geben. Ich habe vor kurzem mein Studium beendet und musste
     mich
     erst daran gew&ouml;hnen, Vollzeit zu arbeiten. Das sollte nun gepackt sein, also kann ich wieder mehr am Uploader
@@ -607,10 +509,7 @@
     </p>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
 <h2>Version 0.2.2 BETA</h2>
@@ -624,10 +523,7 @@
         Explorer!).</p>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
 <h2>Version 0.2.1 BETA</h2>
@@ -643,10 +539,7 @@
         einem Update angezeigt</p>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
 <h2>Version 0.2.0 BETA</h2>
@@ -659,10 +552,7 @@
         diese automatisch installieren kann</p>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
 <h2>Version 0.1.2 BETA</h2>
@@ -682,10 +572,7 @@
     <li><p><b>Feature</b>: Fehler werden in einen Ordner "errors" geloggt.</p>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
 <h2>Version 0.1.1 BETA</h2>
@@ -702,10 +589,7 @@
     <li><p><b>Zahlreiche Bugfixes</b></p>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
 
 
 <h2>Version 0.1.0 BETA</h2>
@@ -722,7 +606,4 @@
     <li><p><b>Feature</b>: Videos k&ouml;nnen hochgeladen und automatisiert geplant werden.</p>
     </li>
 </ul>
-<p><span style="color: red">Bei Fehlern</span> k&ouml;nnt ihr euch gerne melden, Kontaktm&ouml;glichkeiten sind im
-    Programm im
-    Men&uuml; "Hilfe / Support"
-    verlinkt. </p>
+<p>If an <span style="color: red">error occurs</span> please contact me using the "Help / Support" menu.</p>
