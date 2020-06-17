@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.WebView?>
+<GridPane fx:id="mainPane" xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="tv.strohi.stfu.gui.scenes.ReleaseNotesController">
+    <columnConstraints>
+        <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+        <ColumnConstraints hgrow="ALWAYS" />
+        <ColumnConstraints hgrow="NEVER" />
+        <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+        <ColumnConstraints hgrow="NEVER" />
+        <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="10" vgrow="NEVER" />
+        <RowConstraints vgrow="ALWAYS" />
+        <RowConstraints prefHeight="10" vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints prefHeight="10" vgrow="NEVER" />
+    </rowConstraints>
+
+    <TitledPane collapsible="false" text="title" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="4" maxHeight="Infinity" maxWidth="Infinity">
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                <RowConstraints vgrow="ALWAYS" />
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+            </rowConstraints>
+
+            <WebView fx:id="releaseNotes" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1px" GridPane.columnIndex="1" GridPane.rowIndex="1" minWidth="800" minHeight="400" />
+        </GridPane>
+    </TitledPane>
+
+    <CheckBox text="showatstartup" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+    <Button text="close" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+</GridPane>

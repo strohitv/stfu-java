@@ -43,7 +43,7 @@
             <MenuItem text="menu.manage.paths" onAction="#openPathsStage"/>
         </Menu>
         <Menu text="menu.help">
-            <MenuItem text="menu.help.releasenotes"/>
+            <MenuItem text="menu.help.releasenotes" onAction="#showReleaseNotes"/>
             <SeparatorMenuItem/>
             <MenuItem text="menu.help.videotut"/>
             <MenuItem text="menu.help.lpfthread"/>
