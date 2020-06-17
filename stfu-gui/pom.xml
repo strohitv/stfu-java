@@ -10,25 +10,26 @@
 
     <artifactId>stfu-gui</artifactId>
     <properties>
+        <stfu.java.version>14</stfu.java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>${stfu.java.version}</maven.compiler.source>
+        <maven.compiler.target>${stfu.java.version}</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>11</version>
+            <version>${stfu.java.version}</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>11</version>
+            <version>${stfu.java.version}</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
-            <version>11</version>
+            <version>${stfu.java.version}</version>
         </dependency>
         <dependency>
             <groupId>com.github.joniles</groupId>
@@ -44,7 +45,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
-                    <release>11</release>
+                    <release>${stfu.java.version}</release>
                 </configuration>
             </plugin>
 
@@ -132,7 +133,7 @@
                                 <preCp>anything</preCp>
                             </classPath>
                             <jre>
-                                <minVersion>11</minVersion>
+                                <minVersion>${stfu.java.version}</minVersion>
                             </jre>
                             <versionInfo>
                                 <fileVersion>1.2.3.4</fileVersion>
