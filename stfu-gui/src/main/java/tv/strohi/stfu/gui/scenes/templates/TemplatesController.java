@@ -2,7 +2,6 @@ package tv.strohi.stfu.gui.scenes.templates;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.SplitPane;
@@ -12,12 +11,13 @@ import javafx.stage.Stage;
 import tv.strohi.stfu.gui.App;
 import tv.strohi.stfu.gui.i18n.I18N;
 import tv.strohi.stfu.gui.i18n.LocalizationBinder;
+import tv.strohi.stfu.gui.scenes.Controller;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class TemplatesController implements Initializable {
+public class TemplatesController implements Controller {
     @FXML
     private SplitPane mainPane;
 
@@ -33,7 +33,7 @@ public class TemplatesController implements Initializable {
     }
 
     public void addPlaceholderFilenames(ActionEvent actionEvent) throws IOException {
-        Scene scene = new Scene(App.loadFXML("scenes/templates/add-placeholder-videos"));
+        Scene scene = new Scene(App.loadFXML("scenes/templates/add-placeholder-videos", null));
 
         Stage stage = new Stage();
         stage.setTitle(I18N.get("bundles.scenes.templates.templates", "subwindows.addplaceholdervideos"));

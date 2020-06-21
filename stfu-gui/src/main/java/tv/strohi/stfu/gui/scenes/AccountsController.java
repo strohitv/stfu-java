@@ -1,9 +1,7 @@
 package tv.strohi.stfu.gui.scenes;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
@@ -16,7 +14,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AccountsController implements Initializable {
+public class AccountsController implements Controller {
     @FXML
     private GridPane mainPane;
 
@@ -27,15 +25,15 @@ public class AccountsController implements Initializable {
         LocalizationBinder.addListeners(mainPane.getChildren().toArray(),"bundles.scenes.accounts");
     }
 
-    public void openYoutubeLink(ActionEvent actionEvent) {
+    public void openYoutubeLink() {
 
     }
 
-    public void openTwitterLink(ActionEvent actionEvent) {
+    public void openTwitterLink() {
 
     }
 
-    public void addYoutubeAccount(ActionEvent actionEvent) throws IOException {
+    public void addYoutubeAccount() throws IOException {
         Scene scene = new Scene(loadFXML("scenes/browser"));
 
         Stage stage = new Stage();

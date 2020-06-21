@@ -2,14 +2,13 @@ package tv.strohi.stfu.gui.scenes;
 
 import javafx.concurrent.Worker;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class BrowserController implements Initializable {
+public class BrowserController implements Controller {
     @FXML
     private WebView mainPane;
 

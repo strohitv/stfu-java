@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="mainPane" prefHeight="200.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tv.strohi.stfu.gui.scenes.UpdateController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" prefWidth="10" minWidth="10"/>
+        <ColumnConstraints hgrow="ALWAYS"/>
+        <ColumnConstraints hgrow="NEVER" prefWidth="10" minWidth="10"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="10" vgrow="NEVER" minHeight="10"/>
+        <RowConstraints vgrow="ALWAYS"/>
+        <RowConstraints prefHeight="10" vgrow="NEVER" minHeight="10"/>
+        <RowConstraints vgrow="NEVER"/>
+        <RowConstraints prefHeight="10" vgrow="NEVER" minHeight="10"/>
+    </rowConstraints>
+
+    <Label fx:id="updateLabel" alignment="CENTER" maxWidth="Infinity" text="update.searching" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" wrapText="true">
+        <font>
+            <Font name="System Bold" size="16.0"/>
+        </font>
+    </Label>
+    <ProgressBar maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+</GridPane>

@@ -22,7 +22,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("scenes/main"));
+        scene = new Scene(loadFXML("scenes/main", null));
         stage.setTitle("STFU - " + Version.getVersion() + " [BETA]");
         stage.setScene(scene);
         stage.setMaximized(true);
@@ -30,7 +30,7 @@ public class App extends Application {
     }
 
     static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
+        scene.setRoot(loadFXML(fxml, null));
     }
 
     public static Locale getLocale() {
@@ -51,10 +51,17 @@ public class App extends Application {
         I18N.setLocale(App.locale);
     }
 
-    public static Parent loadFXML(String fxml) throws IOException {
+    public static Parent loadFXML(String fxml, ControllerHolder controllerHolder) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/tv/strohi/stfu/gui/" + fxml + ".fxml"));
         fxmlLoader.setResources(ResourceBundle.getBundle("bundles." + fxml.replace('/', '.')));
-        return fxmlLoader.load();
+
+        Parent parent = fxmlLoader.load();
+
+        if (controllerHolder != null) {
+            controllerHolder.setHolder(fxmlLoader.getController());
+        }
+
+        return parent;
     }
 
     public static void main(String[] args) {

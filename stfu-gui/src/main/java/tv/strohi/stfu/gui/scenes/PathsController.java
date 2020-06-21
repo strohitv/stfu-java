@@ -1,7 +1,6 @@
 package tv.strohi.stfu.gui.scenes;
 
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.GridPane;
 import tv.strohi.stfu.gui.i18n.LocalizationBinder;
@@ -9,7 +8,7 @@ import tv.strohi.stfu.gui.i18n.LocalizationBinder;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PathsController implements Initializable {
+public class PathsController implements Controller {
     @FXML
     private GridPane mainPane;
 
