@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="mainPane" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="600.0">
+    <columnConstraints>
+        <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+        <ColumnConstraints hgrow="ALWAYS" />
+        <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="10" vgrow="NEVER" />
+        <RowConstraints vgrow="ALWAYS" />
+        <RowConstraints prefHeight="10" vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints prefHeight="10" vgrow="NEVER" />
+    </rowConstraints>
+
+    <TitledPane text="Allgemeine Einstellungen" GridPane.columnIndex="1" GridPane.rowIndex="1" >
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+                <ColumnConstraints hgrow="NEVER" />
+                <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+                <ColumnConstraints hgrow="NEVER" />
+                <ColumnConstraints prefWidth="10" hgrow="NEVER" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints vgrow="ALWAYS" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints vgrow="ALWAYS" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints prefHeight="10" vgrow="NEVER" />
+            </rowConstraints>
+        </GridPane>
+    </TitledPane>
+</GridPane>
