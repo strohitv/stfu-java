@@ -2,6 +2,7 @@ package tv.strohi.stfu.gui.scenes;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -21,6 +22,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class UpdateController implements Controller {
     private Stage ownStage;
+    private boolean execute = true;
 
     @FXML
     private Label updateLabel;
@@ -39,37 +41,47 @@ public class UpdateController implements Controller {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         LocalizationBinder.addListeners(mainPane.getChildren().toArray(), "bundles.scenes.update");
 
-        Timeline fiveSecondsWonder = new Timeline(new KeyFrame(Duration.seconds(1), new EventHandler<ActionEvent>() {
+        final Timeline fiveSecondsWonder = new Timeline(new KeyFrame(Duration.seconds(1), new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                int randomNum = ThreadLocalRandom.current().nextInt(0, 8);
-                if (randomNum < 7) {
-                    updateLabel.textProperty().bind(I18N.createStringBinding("bundles.scenes.update", names[randomNum]));
-                } else {
-                    ownStage.close();
+                if (execute) {
+                    int randomNum = ThreadLocalRandom.current().nextInt(0, 8);
+                    if (randomNum <= 2) {
+                        updateLabel.textProperty().bind(I18N.createStringBinding("bundles.scenes.update", names[randomNum]));
+                    } else if (randomNum <= 4) {
+                        execute = false;
+                        Platform.runLater(() -> {
+                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                            alert.setTitle(I18N.get("bundles.scenes.update", names[4]).replace("&#13;", System.lineSeparator()));
+                            alert.setHeaderText(I18N.get("bundles.scenes.update", names[4]).replace("&#13;", System.lineSeparator()));
+                            alert.setContentText(I18N.get("bundles.scenes.update", names[3]).replace("&#13;", System.lineSeparator()));
+
+                            Optional<ButtonType> result = alert.showAndWait();
+                            if (result.isPresent() && result.get() == ButtonType.OK) {
+                                ownStage.close();
+                            }
+                            execute = true;
+                        });
+                    } else if (randomNum <= 6) {
+                        execute = false;
+                        Platform.runLater(() -> {
+                            Alert alert = new Alert(Alert.AlertType.ERROR);
+                            alert.setTitle(I18N.get("bundles.scenes.update", names[6]).replace("&#13;", System.lineSeparator()));
+                            alert.setHeaderText(I18N.get("bundles.scenes.update", names[6]).replace("&#13;", System.lineSeparator()));
+                            alert.setContentText(I18N.get("bundles.scenes.update", names[5]).replace("&#13;", System.lineSeparator()));
+
+                            Optional<ButtonType> result = alert.showAndWait();
+                            if (result.isPresent() && result.get() == ButtonType.OK) {
+                                ownStage.close();
+                            }
+                            execute = true;
+                        });
+                    } else {
+                        ownStage.close();
+                    }
                 }
             }
         }));
-
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle(I18N.get("bundles.scenes.update", names[4]).replace("&#13;", System.lineSeparator()));
-        alert.setHeaderText(I18N.get("bundles.scenes.update", names[4]).replace("&#13;", System.lineSeparator()));
-        alert.setContentText(I18N.get("bundles.scenes.update", names[3]).replace("&#13;", System.lineSeparator()));
-
-        Optional<ButtonType> result = alert.showAndWait();
-        if (result.isPresent() && result.get() == ButtonType.OK){
-            ownStage.close();
-        }
-
-        alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(I18N.get("bundles.scenes.update", names[6]).replace("&#13;", System.lineSeparator()));
-        alert.setHeaderText(I18N.get("bundles.scenes.update", names[6]).replace("&#13;", System.lineSeparator()));
-        alert.setContentText(I18N.get("bundles.scenes.update", names[5]).replace("&#13;", System.lineSeparator()));
-
-        result = alert.showAndWait();
-        if (result.isPresent() && result.get() == ButtonType.OK){
-//            ownStage.close();
-        }
 
         fiveSecondsWonder.setCycleCount(Timeline.INDEFINITE);
         fiveSecondsWonder.play();
